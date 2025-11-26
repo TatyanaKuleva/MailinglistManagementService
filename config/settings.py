@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "mailings",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -100,18 +101,18 @@ USE_I18N = True
 
 USE_TZ = True
 
-#
-# STATIC_URL = "static/"
-#
-# STATICFILES_DIRS = (BASE_DIR / "static",)
+
+STATIC_URL = "static/"
+
+STATICFILES_DIRS = (BASE_DIR / "static",)
 #
 # DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #
-# MEDIA_URL = "/media/"
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 #
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-#
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.CustomUser'
 #
 # LOGIN_REDIRECT_URL = '/home/'
 # LOGOUT_REDIRECT_URL = '/home/'
