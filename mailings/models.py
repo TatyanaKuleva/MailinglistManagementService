@@ -6,7 +6,7 @@ class Recipient(models.Model):
        Модель для хранения данных о получателе.
     """
     email = models.EmailField(
-        unique=True, help_text="Адрес электронной почты подписчика."
+        unique=True, help_text="Адрес электронной почты получателя."
     )
     full_name = models.CharField(
         max_length=255,
