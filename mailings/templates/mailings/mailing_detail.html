@@ -1,0 +1,28 @@
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal product-name-area ">{{object.start_time}}</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"></h1>
+                    <ul class="list-unstyled mt-3 mb-5 text-start m-3">
+                        <li class="mb-5"> Дата и время окончания рассылки: {{mailing.end_time}}</li>
+                        <li class="mb-5"> Статус рассылки {{mailing.status}}</li>
+                        <li class="mb-5"> Сообщение {{mailing.message}}</li>
+                        <li class="mb-5"> Получатели {{mailing.recipients }}</li>
+                    </ul>
+                    <a class="btn btn-primary" href="{% url 'mailings:mailing_list' %}" role="button">Назад</a>
+                    <a class="btn btn-primary" href="{% url 'mailings:mailing_update' object.pk %}" role="button">Редактировать</a>
+                    <a class="btn btn-primary" href="{% url 'mailings:mailing_delete' object.pk %}" role="button">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
