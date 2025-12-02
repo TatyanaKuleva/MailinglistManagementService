@@ -11,15 +11,50 @@
                 </div>
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title"></h1>
-                    <ul class="list-unstyled mt-3 mb-5 text-start m-3">
-                        <li class="mb-5"> Дата и время окончания рассылки: {{mailing.end_time}}</li>
-                        <li class="mb-5"> Статус рассылки {{mailing.status}}</li>
-                        <li class="mb-5"> Сообщение {{mailing.message}}</li>
-                        <li class="mb-5"> Получатели {{mailing.recipients }}</li>
-                    </ul>
+
+                        <p><strong>Начало:</strong> {{ mailing.start_time|date:"d M Y H:i" }}</p>
+                        <p><strong>Окончание:</strong> {{ mailing.end_time|date:"d M Y H:i" }}</p>
+                        <p><strong>Статус рассылки:</strong> {{mailing.status}}</p>
+                        <p><strong>Сообщение:</strong> {{mailing.message}}</p>
+                        <p><strong>Количество получателей:</strong> {{recipients_count }}</p>
+
+        <h2>Содержание письма</h2>
+        <div style="background-color: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
+            <p style="white-space: pre-wrap;">{{ mailing.message.body }}</p>
+        </div>
+
+
+        <h2>Список получателей ({{ recipients|length }})</h2>
+        {% if recipients %}
+            <ul class="recipients-list">
+                {% for client in recipients %}
+                    <li>
+                        <strong>{{ client.email }}</strong>
+                         <strong>{{ client.full_name}}</strong>
+                    </li>
+                {% endfor %}
+            </ul>
+                    {% else %}
+                        <p class="no-recipients">Нет получателей, назначенных этой рассылке.</p>
+                        {% endif %}
+
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_list' %}" role="button">Назад</a>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_update' object.pk %}" role="button">Редактировать</a>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_delete' object.pk %}" role="button">Удалить</a>
+
+
+                    <form method="post" action="{% url 'mailings:mailing_detail' object.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" name="send_mailing" class="btn btn-primary">Отправить рассылку</button>
+                    </form>
+
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li class="{{ message.tags }}">{{ message }}</li>
+                     {% endfor %}
+                        </ul>
+                    {% endif %}
                 </div>
             </div>
         </div>

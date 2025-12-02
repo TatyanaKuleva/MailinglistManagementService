@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import redirect
+from django.urls import reverse
 from django.views.generic import (
     ListView,
     DetailView,
@@ -7,8 +10,12 @@ from django.views.generic import (
     DeleteView
 )
 from django.urls import reverse_lazy
-from .models import Recipient, Message, Mailing
+from .models import Recipient, Message, Mailing, MailingAttempt
 from .forms import RecipientForm, MessageForm, MailingForm
+from .services import send_mailing
+import logging
+
+
 
 
 class RecipientListView(ListView):
@@ -93,6 +100,39 @@ class MailingDetailView(DetailView):
     template_name = 'mailings/mailing_detail.html'
     context_object_name = 'mailing'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        mailing = self.get_object()
+
+        context['recipients_count'] = mailing.recipients.count()
+        context['recipients'] = mailing.recipients.all()
+        return context
+
+
+    def post(self, request, *args, **kwargs):
+        """
+        Обрабатывает POST-запрос при нажатии кнопки "Отправить".
+        """
+        self.object = self.get_object()
+
+        if 'send_mailing' in request.POST:
+            is_sent, messages_text = self.object.send_mailing_manually()
+
+
+            if is_sent:
+                messages.success(request, f"Рассылка успешно отправлена!{messages_text}")
+            else:
+                messages.error(request, f" Ошибка при отправке рассылки {messages_text}")
+
+
+
+
+            return redirect(reverse('mailings:mailing_detail', kwargs={'pk': self.object.pk}))
+
+
+        return super().post(request, *args, **kwargs)
+
+
 
 class MailingCreateView(CreateView):
     model = Mailing
@@ -116,3 +156,38 @@ class MailingDeleteView(DeleteView):
     template_name = 'mailings/mailing_confirm_delete.html'
     success_url = reverse_lazy('mailings:mailing_list')
     context_object_name = 'mailing'
+
+# class MailingAttemptListView(ListView):
+#     model = MailingAttempt
+#     template_name = 'mailings/mailing_attempt_list.html'
+#     context_object_name = 'mailing_attempts'
+#
+#
+# class MailingAttemptDetailView(DetailView):
+#     model = MailingAttempt
+#     template_name = 'mailings/mailing_attempt_detail.html'
+#     context_object_name = 'mailing_attempt'
+#
+#
+# class MailingAttemptCreateView(CreateView):
+#     model = MailingAttempt
+#     form_class = Mailing
+#     template_name = 'mailings/mailing_form.html'
+#     success_url = reverse_lazy('mailings:mailing_list')
+#
+#
+# class MailingUpdateView(UpdateView):
+#     model = Mailing
+#     form_class = MailingForm
+#     template_name = 'mailings/mailing_form.html'
+#     context_object_name = 'mailing'
+#
+#     def get_success_url(self):
+#         return reverse_lazy('mailings:mailing_detail', kwargs={'pk': self.object.pk})
+#
+#
+# class MailingDeleteView(DeleteView):
+#     model = Mailing
+#     template_name = 'mailings/mailing_confirm_delete.html'
+#     success_url = reverse_lazy('mailings:mailing_list')
+#     context_object_name = 'mailing'

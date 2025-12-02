@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import os
 
 from django.conf.global_settings import (
     STATICFILES_DIRS,
@@ -11,6 +12,7 @@ from django.conf.global_settings import (
     LOGOUT_REDIRECT_URL,
     SERVER_EMAIL,
 )
+
 
 load_dotenv(override=True)
 
@@ -99,7 +101,7 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 STATIC_URL = "static/"
@@ -114,21 +116,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 #
 AUTH_USER_MODEL = 'users.CustomUser'
 #
-# LOGIN_REDIRECT_URL = '/home/'
-# LOGOUT_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = 'recipients/recipient_list/'
+LOGOUT_REDIRECT_URL = '/recipient_list/'
 
 
-# LOGIN_URL = 'users:login'
-#
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = os.getenv("EMAIL_HOST")
-# EMAIL_PORT = os.getenv("EMAIL_PORT")
-# EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", False) == "True"
-# EMAIL_USE_SSL =os.getenv("EMAIL_HOSTEMAIL_USE_SSL", False) == "True"
-# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-# SERVER_EMAIL = EMAIL_HOST_USER
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+LOGIN_URL = 'users:login'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_PORT = os.getenv("EMAIL_PORT")
+EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", False) == "True"
+EMAIL_USE_SSL =os.getenv("EMAIL_HOSTEMAIL_USE_SSL", False) == "True"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 #
 # CACHE_ENABLED = True
 #
@@ -139,3 +141,51 @@ AUTH_USER_MODEL = 'users.CustomUser'
 #             'LOCATION': os.getenv("LOCATION")
 #         }
 #     }
+
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO', # Можно поставить DEBUG для более подробных логов
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple' # Используйте 'verbose' для более полной информации
+        },
+        'file': {
+            'level': 'INFO', # Можно поставить DEBUG
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django_mailing.log'), # Создайте папку 'logs'
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'your_app_name': { # Укажите имя вашего приложения
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG', # Здесь можно поставить DEBUG для детального логирования вашего приложения
+            'propagate': False,
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'WARNING',
+    },
+}
