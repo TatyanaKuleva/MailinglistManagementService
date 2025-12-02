@@ -199,7 +199,6 @@ class Mailing(models.Model):
                 MailingAttempt.objects.create(
                         mailing=self,
                         status= MailingAttempt.STATUS_SUCCESS,
-                        smtp_response='Сообщение отправлено успешно',
                         timestamp=timezone.now(),
                         server_response = None
                     )

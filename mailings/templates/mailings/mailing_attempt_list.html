@@ -1,0 +1,33 @@
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Список попыток отправки</h1>
+    <p class="lead">Список попыток отправки</p>
+</div>
+{% if mailing_attempts  %}
+<div class="container">
+    <div class="row text-center">
+        {% for mailing_attempt in mailing_attempts %}
+        <div class="col-3">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal product-name-area ">{{mailing_attempt.status}}</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"></h1>
+                    <ul class="list-unstyled mt-3 mb-5 text-start m-3">
+                        <li class="mb-5"> {{mailing_attempt.timestamp}}</li>
+                    </ul>
+                    <a class="btn btn-primary" href="{% url 'mailings:mailing_attempt_detail' mailing_attempt.pk %}" role="button">Подробнее</a>
+
+
+                </div>
+            </div>
+        </div>
+         {% endfor %}
+    </div>
+</div>
+{% else %}
+    Пока нет зарегистрированных попыток отправки.
+{% endif %}
+{% endblock %}

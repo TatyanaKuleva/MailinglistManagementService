@@ -157,37 +157,17 @@ class MailingDeleteView(DeleteView):
     success_url = reverse_lazy('mailings:mailing_list')
     context_object_name = 'mailing'
 
-# class MailingAttemptListView(ListView):
-#     model = MailingAttempt
-#     template_name = 'mailings/mailing_attempt_list.html'
-#     context_object_name = 'mailing_attempts'
-#
-#
-# class MailingAttemptDetailView(DetailView):
-#     model = MailingAttempt
-#     template_name = 'mailings/mailing_attempt_detail.html'
-#     context_object_name = 'mailing_attempt'
-#
-#
-# class MailingAttemptCreateView(CreateView):
-#     model = MailingAttempt
-#     form_class = Mailing
-#     template_name = 'mailings/mailing_form.html'
-#     success_url = reverse_lazy('mailings:mailing_list')
-#
-#
-# class MailingUpdateView(UpdateView):
-#     model = Mailing
-#     form_class = MailingForm
-#     template_name = 'mailings/mailing_form.html'
-#     context_object_name = 'mailing'
-#
-#     def get_success_url(self):
-#         return reverse_lazy('mailings:mailing_detail', kwargs={'pk': self.object.pk})
-#
-#
-# class MailingDeleteView(DeleteView):
-#     model = Mailing
-#     template_name = 'mailings/mailing_confirm_delete.html'
-#     success_url = reverse_lazy('mailings:mailing_list')
-#     context_object_name = 'mailing'
+class MailingAttemptListView(ListView):
+    model = MailingAttempt
+    template_name = 'mailings/mailing_attempt_list.html'
+    context_object_name = 'mailing_attempts'
+
+
+class MailingAttemptDetailView(DetailView):
+    model = MailingAttempt
+    template_name = 'mailings/mailing_attempt_detail.html'
+    context_object_name = 'mailing_attempt'
+
+
+
+

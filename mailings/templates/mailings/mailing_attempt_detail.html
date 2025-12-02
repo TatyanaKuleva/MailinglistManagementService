@@ -1,0 +1,27 @@
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal product-name-area ">{{object.timestamp}}</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"></h1>
+
+                        <p><strong>Статус:</strong> {{ mailing_attempt.status }}</p>
+                        <p><strong>Ответ почтового серверае:</strong> {{ mailing_attempt.server_response }}</p>
+                        <p><strong>Тема письма:</strong> {{mailing_attempt.mailing.message.suvject}}</p>
+                        <p><strong>Количество получателей:</strong> {{mailing_attempt.mailing.recipients_count }}</p>
+
+                    <a class="btn btn-primary" href="{% url 'mailings:mailing_attempts_list' %}" role="button">Назад</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
