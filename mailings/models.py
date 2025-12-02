@@ -1,4 +1,12 @@
 from django.db import models
+from django.utils import timezone
+from django.core.exceptions import ValidationError
+from django.core.mail import send_mail
+from config.settings import EMAIL_HOST_USER
+import logging
+
+
+logger = logging.getLogger('mailings.models')
 
 
 class Recipient(models.Model):
@@ -56,7 +64,7 @@ class Message(models.Model):
 class Mailing(models.Model):
     """
     Модель для управления рассылками.
-    Определяет расписание, статус, сообщение и список получателей.
+    Определяет расписание, статус рассылки, сообщение и список получателей.
     """
 
     STATUS_CREATED = 'created'
@@ -70,7 +78,7 @@ class Mailing(models.Model):
     ]
 
     start_time = models.DateTimeField(
-        verbose_name="Дата и время начала рассылки",
+        verbose_name="Дата и время c какого момента рассылка может быть запущена",
         help_text="Укажите дату и время первой отправки рассылки."
     )
     end_time = models.DateTimeField(
@@ -84,6 +92,7 @@ class Mailing(models.Model):
         verbose_name="Статус рассылки",
         help_text="Текущий статус рассылки (Создана, Запущена, Завершена)."
     )
+
     message = models.ForeignKey(
         Message,
         on_delete=models.CASCADE,
@@ -104,7 +113,116 @@ class Mailing(models.Model):
         ordering = ['-start_time']
 
     def __str__(self):
-        return f"Рассылка '{self.message.subject}' с {self.start_time.strftime('%Y-%m-%d %H:%M')}"
+        return f"Рассылка '{self.message.subject}' с {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}"
+
+    def clean(self):
+        """
+        Метод для кастомной валидации полей модели.
+        """
+        super().clean()
+
+        now = timezone.now()
+        if self.start_time and self.start_time < now:
+            raise ValidationError(
+                {'start_time': 'Дата и время начала рассылки не могут быть в прошлом.'}
+            )
+
+        if self.start_time and self.end_time and self.start_time >= self.end_time:
+            raise ValidationError(
+                {'end_time': 'Дата и время окончания рассылки должны быть позже даты начала.'}
+            )
+
+
+    def update_status(self):
+        """
+        Обновляет статус рассылки на основе текущего времени.
+        Возвращает True, если статус был изменен, иначе False.
+        """
+        now = timezone.now()
+
+        new_status = self.status
+
+
+        if now < self.start_time:
+            new_status = self.STATUS_CREATED
+        elif self.start_time <= now <= self.end_time:
+            new_status = self.STATUS_RUNNING
+        elif now > self.end_time:
+            new_status = self.STATUS_COMPLETED
+
+        if new_status != self.status:
+            self.status = new_status
+            self.save(update_fields=['status'])
+            return True
+
+        return False
+
+    def send_mailing_manually(self):
+        """
+        Запускает рассылку вручную.
+        Возвращает True в случае успешного начала отправки, False при ошибке валидации времени.
+        """
+        logger.info(f"Начало ручной отправки рассылки ID:{self.pk}, Тема: '{self.message.subject}'")
+        now = timezone.now()
+
+        if not (self.start_time <= now <= self.end_time):
+            message = (f"Ошибка: Невозможно запустить рассылку '{self.message}'. "
+                       f"Текущее время {now.strftime('%Y-%m-%d %H:%M:%S')} "
+                       f"не находится между {self.start_time.strftime('%Y-%m-%d %H:%M:%S')} "
+                       f"и {self.end_time.strftime('%Y-%m-%d %H:%M:%S')}.")
+
+            logger.warning(f"Валидация времени для рассылки ID:{self.pk} не пройдена: {message}")
+            return False, message
+
+        if not self.recipients.exists():
+            message = f"Ошибка: Рассылка '{self.message}' не имеет получателей."
+            logger.warning(f'Для рассылки ID:{self.pk} не найдено получателей.')
+            return False, message
+
+        logger.info(f"Валидация для рассылки ID:{self.pk} пройдена. Начинается отправка писем.")
+
+
+        successful_sends = 0
+        failed_sends = 0
+
+
+
+        for recipient in self.recipients.all():
+            logger.debug(f"✉Попытка отправить письмо клиенту {recipient.email} для рассылки ID:{self.pk}")
+            try:
+                send_mail(
+                    subject=self.message.subject,
+                    message=self.message.body,
+                    from_email=EMAIL_HOST_USER,
+                    recipient_list=[recipient.email],
+                        )
+                MailingAttempt.objects.create(
+                        mailing=self,
+                        status= MailingAttempt.STATUS_SUCCESS,
+                        smtp_response='Сообщение отправлено успешно',
+                        timestamp=timezone.now(),
+                        server_response = None
+                    )
+                successful_sends += 1
+                logger.info(f"Успешно отправлено клиенту {recipient.email} для рассылки ID:{self.pk}.")
+            except Exception as e:
+                MailingAttempt.objects.create(
+                    mailing=self,
+                    status=MailingAttempt.STATUS_FAILED,
+                    timestamp=timezone.now(),
+                    server_response=str(e)
+                )
+                failed_sends += 1
+                logger.error(f"Ошибка отправки клиенту {recipient.email} для рассылки ID:{self.pk}: {e}")
+
+            self.update_status()
+            self.save()
+
+            final_message = (f"Рассылка '{self.message}' завершена: ")
+
+            logger.info(f"{final_message}")
+            return True, final_message
+
 
 
 class MailingAttempt(models.Model):
