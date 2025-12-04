@@ -1,8 +1,9 @@
-
+{% extends 'mailings/base.html' %}
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Список рассылок</h1>
     <p class="lead">Список рассылок</p>
+    <a class="btn btn-primary" href="{% url 'mailings:mailing_create' %}" role="button">Создать рассылку</a>
 </div>
 {% if mailings %}
 <div class="container">
@@ -16,10 +17,11 @@
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title"></h1>
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
-                        <li class="mb-5"> {{mailing.end_time}}</li>
-                        <li class="mb-5"> {{mailing.status}}</li>
-                        <li class="mb-5"> {{mailing.message}}</li>
-                        <li class="mb-5"> {{mailing.recipients }}</li>
+                        <li class="mb-5"> Окончание рассылки {{mailing.end_time}}</li>
+                        <li class="mb-5"> Статус {{mailing.status}}</li>
+                        <li class="mb-5"> Сообщение {{mailing.message}}</li>
+                        <li class="mb-5"> Количество получателей {{mailing.recipients.count}}</li>
+
 
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_detail' mailing.pk %}" role="button">Подробнее</a>

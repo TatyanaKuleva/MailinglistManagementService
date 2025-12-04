@@ -687,3 +687,1610 @@ INFO 2025-12-03 01:24:59,396 basehttp 130976 126844 "GET /mailings/mailing_attem
 INFO 2025-12-03 01:24:59,396 basehttp 130976 126844 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 7262
 INFO 2025-12-03 01:25:01,006 basehttp 130976 126844 "GET /mailings/mailing_attempts/6/ HTTP/1.1" 200 999
 INFO 2025-12-03 01:25:01,006 basehttp 130976 126844 "GET /mailings/mailing_attempts/6/ HTTP/1.1" 200 999
+INFO 2025-12-03 19:56:34,963 autoreload 6376 14936 Watching for file changes with StatReloader
+INFO 2025-12-03 19:56:34,963 autoreload 6376 14936 Watching for file changes with StatReloader
+WARNING 2025-12-03 19:56:38,674 log 6376 9720 Not Found: /
+WARNING 2025-12-03 19:56:38,674 log 6376 9720 Not Found: /
+WARNING 2025-12-03 19:56:38,677 basehttp 6376 9720 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-03 19:56:38,677 basehttp 6376 9720 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-03 19:56:38,782 log 6376 9720 Not Found: /favicon.ico
+WARNING 2025-12-03 19:56:38,782 log 6376 9720 Not Found: /favicon.ico
+WARNING 2025-12-03 19:56:38,784 basehttp 6376 9720 "GET /favicon.ico HTTP/1.1" 404 2509
+WARNING 2025-12-03 19:56:38,784 basehttp 6376 9720 "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-12-03 19:56:48,161 basehttp 6376 8464 "GET /mailings/recipients/ HTTP/1.1" 200 1893
+INFO 2025-12-03 19:56:48,161 basehttp 6376 8464 "GET /mailings/recipients/ HTTP/1.1" 200 1893
+INFO 2025-12-03 19:56:58,590 basehttp 6376 8840 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 7262
+INFO 2025-12-03 19:56:58,590 basehttp 6376 8840 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 7262
+ERROR 2025-12-03 20:04:08,852 send_mailing 15116 15688 Ошибка отправки клиенту tatianaarsentievna@gmail.com для рассылки ID:5: 'Style' object has no attribute 'MIGRATE_SUCCESS'
+ERROR 2025-12-03 20:04:10,337 send_mailing 15116 15688 Ошибка отправки клиенту tatianaarsentievna@gmail.com для рассылки ID:7: 'Style' object has no attribute 'MIGRATE_SUCCESS'
+INFO 2025-12-03 20:04:33,700 autoreload 12916 22392 Watching for file changes with StatReloader
+INFO 2025-12-03 20:04:33,700 autoreload 12916 22392 Watching for file changes with StatReloader
+WARNING 2025-12-03 20:04:37,341 log 12916 15036 Not Found: /
+WARNING 2025-12-03 20:04:37,341 log 12916 15036 Not Found: /
+WARNING 2025-12-03 20:04:37,343 basehttp 12916 15036 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-03 20:04:37,343 basehttp 12916 15036 "GET / HTTP/1.1" 404 2458
+INFO 2025-12-03 20:04:57,490 basehttp 12916 15036 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 10044
+INFO 2025-12-03 20:04:57,490 basehttp 12916 15036 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 10044
+INFO 2025-12-03 20:05:01,172 basehttp 12916 15036 "GET /mailings/mailing_attempts/13/ HTTP/1.1" 200 935
+INFO 2025-12-03 20:05:01,172 basehttp 12916 15036 "GET /mailings/mailing_attempts/13/ HTTP/1.1" 200 935
+INFO 2025-12-03 20:17:13,428 basehttp 12916 21348 "GET /mailings/mailings/ HTTP/1.1" 200 8542
+INFO 2025-12-03 20:17:13,428 basehttp 12916 21348 "GET /mailings/mailings/ HTTP/1.1" 200 8542
+ERROR 2025-12-03 20:17:34,562 log 12916 21348 Internal Server Error: /mailings/recipients/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-03 20:17:34,562 log 12916 21348 Internal Server Error: /mailings/recipients/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-12-03 20:17:34,593 basehttp 12916 21348 "GET /mailings/recipients/ HTTP/1.1" 500 130453
+ERROR 2025-12-03 20:17:34,593 basehttp 12916 21348 "GET /mailings/recipients/ HTTP/1.1" 500 130453
+INFO 2025-12-03 20:18:47,151 basehttp 12916 21348 "GET /mailings/recipients/ HTTP/1.1" 200 3954
+INFO 2025-12-03 20:18:47,151 basehttp 12916 21348 "GET /mailings/recipients/ HTTP/1.1" 200 3954
+WARNING 2025-12-03 20:20:15,917 log 12916 7996 Not Found: /mailings/recipient_create/
+WARNING 2025-12-03 20:20:15,917 log 12916 7996 Not Found: /mailings/recipient_create/
+WARNING 2025-12-03 20:20:15,921 basehttp 12916 7996 "GET /mailings/recipient_create/ HTTP/1.1" 404 7306
+WARNING 2025-12-03 20:20:15,921 basehttp 12916 7996 "GET /mailings/recipient_create/ HTTP/1.1" 404 7306
+INFO 2025-12-03 20:20:46,210 basehttp 12916 7996 "GET /mailings/recipient/create/ HTTP/1.1" 200 3959
+INFO 2025-12-03 20:20:46,210 basehttp 12916 7996 "GET /mailings/recipient/create/ HTTP/1.1" 200 3959
+INFO 2025-12-04 10:07:48,282 autoreload 30116 25032 Watching for file changes with StatReloader
+INFO 2025-12-04 10:07:48,282 autoreload 30116 25032 Watching for file changes with StatReloader
+WARNING 2025-12-04 10:07:50,459 log 30116 22336 Not Found: /
+WARNING 2025-12-04 10:07:50,459 log 30116 22336 Not Found: /
+WARNING 2025-12-04 10:07:50,459 basehttp 30116 22336 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:07:50,459 basehttp 30116 22336 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:07:54,998 log 30116 25348 Not Found: /home/
+WARNING 2025-12-04 10:07:54,998 log 30116 25348 Not Found: /home/
+WARNING 2025-12-04 10:07:54,999 basehttp 30116 25348 "GET /home/ HTTP/1.1" 404 2491
+WARNING 2025-12-04 10:07:54,999 basehttp 30116 25348 "GET /home/ HTTP/1.1" 404 2491
+WARNING 2025-12-04 10:08:07,914 log 30116 25348 Not Found: /mailings/home/
+WARNING 2025-12-04 10:08:07,914 log 30116 25348 Not Found: /mailings/home/
+WARNING 2025-12-04 10:08:07,916 basehttp 30116 25348 "GET /mailings/home/ HTTP/1.1" 404 7270
+WARNING 2025-12-04 10:08:07,916 basehttp 30116 25348 "GET /mailings/home/ HTTP/1.1" 404 7270
+INFO 2025-12-04 10:09:04,710 autoreload 30116 25032 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 10:09:04,710 autoreload 30116 25032 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 10:09:05,439 autoreload 25912 29676 Watching for file changes with StatReloader
+INFO 2025-12-04 10:09:05,439 autoreload 25912 29676 Watching for file changes with StatReloader
+ERROR 2025-12-04 10:09:06,206 log 25912 24500 Internal Server Error: /mailings/home/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: catalog/includes/inc_menu.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: catalog/includes/inc_menu.html
+ERROR 2025-12-04 10:09:06,206 log 25912 24500 Internal Server Error: /mailings/home/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: catalog/includes/inc_menu.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: catalog/includes/inc_menu.html
+ERROR 2025-12-04 10:09:06,219 basehttp 25912 24500 "GET /mailings/home/ HTTP/1.1" 500 161112
+ERROR 2025-12-04 10:09:06,219 basehttp 25912 24500 "GET /mailings/home/ HTTP/1.1" 500 161112
+INFO 2025-12-04 10:10:47,339 basehttp 25912 13020 "GET /mailings/home/ HTTP/1.1" 200 11060
+INFO 2025-12-04 10:10:47,339 basehttp 25912 13020 "GET /mailings/home/ HTTP/1.1" 200 11060
+INFO 2025-12-04 10:10:57,627 basehttp 25912 30420 "GET /users/login/ HTTP/1.1" 200 647
+INFO 2025-12-04 10:10:57,627 basehttp 25912 30420 "GET /users/login/ HTTP/1.1" 200 647
+INFO 2025-12-04 10:11:12,002 basehttp 25912 26284 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:12,002 basehttp 25912 26284 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:19,765 basehttp 25912 26284 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:19,765 basehttp 25912 26284 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:30,315 basehttp 25912 10872 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:30,315 basehttp 25912 10872 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:36,639 basehttp 25912 24376 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:11:36,639 basehttp 25912 24376 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:24:11,971 autoreload 30576 16476 Watching for file changes with StatReloader
+INFO 2025-12-04 10:24:11,971 autoreload 30576 16476 Watching for file changes with StatReloader
+WARNING 2025-12-04 10:24:25,700 log 30576 16268 Not Found: /
+WARNING 2025-12-04 10:24:25,700 log 30576 16268 Not Found: /
+WARNING 2025-12-04 10:24:25,701 basehttp 30576 16268 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:24:25,701 basehttp 30576 16268 "GET / HTTP/1.1" 404 2458
+INFO 2025-12-04 10:24:38,357 basehttp 30576 16268 "GET /mailings/home/ HTTP/1.1" 200 11060
+INFO 2025-12-04 10:24:38,357 basehttp 30576 16268 "GET /mailings/home/ HTTP/1.1" 200 11060
+INFO 2025-12-04 10:25:27,002 basehttp 30576 27944 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:25:27,002 basehttp 30576 27944 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:25:28,038 basehttp 30576 27944 "GET /users/register/ HTTP/1.1" 200 1775
+INFO 2025-12-04 10:25:28,038 basehttp 30576 27944 "GET /users/register/ HTTP/1.1" 200 1775
+ERROR 2025-12-04 10:25:57,438 log 30576 25540 Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 23, in form_valid
+    user = form.save()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 265, in save
+    user = self.set_password_and_save(user, commit=commit)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 154, in set_password_and_save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1873, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+ERROR 2025-12-04 10:25:57,438 log 30576 25540 Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 23, in form_valid
+    user = form.save()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 265, in save
+    user = self.set_password_and_save(user, commit=commit)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 154, in set_password_and_save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1873, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+ERROR 2025-12-04 10:25:57,475 basehttp 30576 25540 "POST /users/register/ HTTP/1.1" 500 183151
+ERROR 2025-12-04 10:25:57,475 basehttp 30576 25540 "POST /users/register/ HTTP/1.1" 500 183151
+ERROR 2025-12-04 10:29:31,173 log 30576 17164 Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 23, in form_valid
+    user = form.save()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 265, in save
+    user = self.set_password_and_save(user, commit=commit)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 154, in set_password_and_save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1873, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+ERROR 2025-12-04 10:29:31,173 log 30576 17164 Internal Server Error: /users/register/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 23, in form_valid
+    user = form.save()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 265, in save
+    user = self.set_password_and_save(user, commit=commit)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\forms.py", line 154, in set_password_and_save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1873, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "users_customuser_username_key"
+DETAIL:  Ключ "(username)=()" уже существует.
+
+ERROR 2025-12-04 10:29:31,211 basehttp 30576 17164 "POST /users/register/ HTTP/1.1" 500 183015
+ERROR 2025-12-04 10:29:31,211 basehttp 30576 17164 "POST /users/register/ HTTP/1.1" 500 183015
+INFO 2025-12-04 10:31:19,465 autoreload 30576 16476 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\models.py changed, reloading.
+INFO 2025-12-04 10:31:19,465 autoreload 30576 16476 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\models.py changed, reloading.
+INFO 2025-12-04 10:31:20,140 autoreload 27980 30188 Watching for file changes with StatReloader
+INFO 2025-12-04 10:31:20,140 autoreload 27980 30188 Watching for file changes with StatReloader
+INFO 2025-12-04 10:31:57,922 autoreload 26740 23248 Watching for file changes with StatReloader
+INFO 2025-12-04 10:31:57,922 autoreload 26740 23248 Watching for file changes with StatReloader
+WARNING 2025-12-04 10:31:59,915 log 26740 14064 Not Found: /
+WARNING 2025-12-04 10:31:59,915 log 26740 14064 Not Found: /
+WARNING 2025-12-04 10:31:59,915 basehttp 26740 14064 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:31:59,915 basehttp 26740 14064 "GET / HTTP/1.1" 404 2458
+INFO 2025-12-04 10:32:14,397 basehttp 26740 30092 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:32:14,397 basehttp 26740 30092 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:32:16,074 basehttp 26740 30092 "GET /users/register/ HTTP/1.1" 200 1775
+INFO 2025-12-04 10:32:16,074 basehttp 26740 30092 "GET /users/register/ HTTP/1.1" 200 1775
+INFO 2025-12-04 10:32:31,545 basehttp 26740 29452 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:32:31,545 basehttp 26740 29452 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:32:31,554 basehttp 26740 29452 "GET /users/login/ HTTP/1.1" 200 647
+INFO 2025-12-04 10:32:31,554 basehttp 26740 29452 "GET /users/login/ HTTP/1.1" 200 647
+WARNING 2025-12-04 10:32:54,761 log 26740 19244 Not Found: /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5
+WARNING 2025-12-04 10:32:54,761 log 26740 19244 Not Found: /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5
+WARNING 2025-12-04 10:32:54,763 basehttp 26740 19244 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5 HTTP/1.1" 404 3268
+WARNING 2025-12-04 10:32:54,763 basehttp 26740 19244 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5 HTTP/1.1" 404 3268
+WARNING 2025-12-04 10:32:55,138 log 26740 19244 Not Found: /favicon.ico
+WARNING 2025-12-04 10:32:55,138 log 26740 19244 Not Found: /favicon.ico
+WARNING 2025-12-04 10:32:55,138 basehttp 26740 19244 "GET /favicon.ico HTTP/1.1" 404 2509
+WARNING 2025-12-04 10:32:55,138 basehttp 26740 19244 "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-12-04 10:33:09,792 basehttp 26740 22364 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:33:09,792 basehttp 26740 22364 "POST /users/login/ HTTP/1.1" 200 824
+INFO 2025-12-04 10:34:30,525 autoreload 26740 23248 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\urls.py changed, reloading.
+INFO 2025-12-04 10:34:30,525 autoreload 26740 23248 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\urls.py changed, reloading.
+INFO 2025-12-04 10:34:31,417 autoreload 25292 20868 Watching for file changes with StatReloader
+INFO 2025-12-04 10:34:31,417 autoreload 25292 20868 Watching for file changes with StatReloader
+INFO 2025-12-04 10:37:12,898 basehttp 25292 25904 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:37:12,898 basehttp 25292 25904 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:37:23,210 basehttp 25292 23048 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5 HTTP/1.1" 301 0
+INFO 2025-12-04 10:37:23,210 basehttp 25292 23048 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5 HTTP/1.1" 301 0
+ERROR 2025-12-04 10:37:23,374 log 25292 10928 Internal Server Error: /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 40, in email_verification
+    user = get_object_or_404(User, token=token)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 621, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1495, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1513, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1523, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'token' into field. Choices are: avatar, country, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, phone_number, user_permissions
+ERROR 2025-12-04 10:37:23,374 log 25292 10928 Internal Server Error: /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 40, in email_verification
+    user = get_object_or_404(User, token=token)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 621, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1495, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1513, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1523, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'token' into field. Choices are: avatar, country, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, phone_number, user_permissions
+ERROR 2025-12-04 10:37:23,384 basehttp 25292 10928 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5/ HTTP/1.1" 500 120836
+ERROR 2025-12-04 10:37:23,384 basehttp 25292 10928 "GET /users/email-confirm/2b76226a90e0546b82aac2f8b6e20fd5/ HTTP/1.1" 500 120836
+INFO 2025-12-04 10:37:40,463 basehttp 25292 27912 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 10:37:40,463 basehttp 25292 27912 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 10:37:50,412 basehttp 25292 19244 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 10:37:50,412 basehttp 25292 19244 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 10:38:03,167 basehttp 25292 26640 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:38:03,167 basehttp 25292 26640 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:38:17,508 basehttp 25292 29908 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:38:17,508 basehttp 25292 29908 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:38:17,515 basehttp 25292 29908 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:38:17,515 basehttp 25292 29908 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:43:42,104 autoreload 16340 25372 Watching for file changes with StatReloader
+INFO 2025-12-04 10:43:42,104 autoreload 16340 25372 Watching for file changes with StatReloader
+WARNING 2025-12-04 10:43:44,021 log 16340 29268 Not Found: /
+WARNING 2025-12-04 10:43:44,021 log 16340 29268 Not Found: /
+WARNING 2025-12-04 10:43:44,022 basehttp 16340 29268 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:43:44,022 basehttp 16340 29268 "GET / HTTP/1.1" 404 2458
+INFO 2025-12-04 10:43:51,450 basehttp 16340 27176 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:43:51,450 basehttp 16340 27176 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:43:51,612 basehttp 16340 27176 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-12-04 10:43:51,612 basehttp 16340 27176 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-12-04 10:43:51,841 basehttp 16340 27176 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-12-04 10:43:51,842 basehttp 16340 19540 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-12-04 10:43:51,841 basehttp 16340 27176 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-12-04 10:43:51,842 basehttp 16340 19816 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-12-04 10:43:51,842 basehttp 16340 19540 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-12-04 10:43:51,842 basehttp 16340 19816 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-12-04 10:43:51,846 basehttp 16340 19392 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-12-04 10:43:51,846 basehttp 16340 19392 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-12-04 10:43:51,848 basehttp 16340 14984 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-12-04 10:43:51,848 basehttp 16340 14984 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-12-04 10:43:51,865 basehttp 16340 29408 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-12-04 10:43:51,865 basehttp 16340 29408 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-12-04 10:43:51,878 basehttp 16340 14984 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-12-04 10:43:51,878 basehttp 16340 14984 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-12-04 10:44:02,373 basehttp 16340 12064 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4358
+INFO 2025-12-04 10:44:02,373 basehttp 16340 12064 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4358
+INFO 2025-12-04 10:44:46,365 basehttp 16340 31116 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-12-04 10:44:46,365 basehttp 16340 31116 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-12-04 10:44:50,746 basehttp 16340 31212 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-12-04 10:44:50,746 basehttp 16340 31212 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+WARNING 2025-12-04 10:47:33,868 log 16340 9676 Not Found: /
+WARNING 2025-12-04 10:47:33,868 log 16340 9676 Not Found: /
+WARNING 2025-12-04 10:47:33,869 basehttp 16340 9676 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:47:33,869 basehttp 16340 9676 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:47:34,040 log 16340 9676 Not Found: /favicon.ico
+WARNING 2025-12-04 10:47:34,040 log 16340 9676 Not Found: /favicon.ico
+WARNING 2025-12-04 10:47:34,042 basehttp 16340 9676 "GET /favicon.ico HTTP/1.1" 404 2509
+WARNING 2025-12-04 10:47:34,042 basehttp 16340 9676 "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-12-04 10:47:43,477 basehttp 16340 30060 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:47:43,477 basehttp 16340 30060 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:47:45,018 basehttp 16340 30060 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:47:45,018 basehttp 16340 30060 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:48:02,618 basehttp 16340 30316 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:48:02,618 basehttp 16340 30316 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:48:02,625 basehttp 16340 30316 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:48:02,625 basehttp 16340 30316 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:48:12,852 basehttp 16340 11340 "GET /users/email-confirm/a7264410608dd07498f84d3a24473e91 HTTP/1.1" 301 0
+INFO 2025-12-04 10:48:12,852 basehttp 16340 11340 "GET /users/email-confirm/a7264410608dd07498f84d3a24473e91 HTTP/1.1" 301 0
+ERROR 2025-12-04 10:48:12,992 log 16340 31376 Internal Server Error: /users/email-confirm/a7264410608dd07498f84d3a24473e91/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 40, in email_verification
+    user = get_object_or_404(User, token=token)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 621, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1495, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1513, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1523, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'token' into field. Choices are: avatar, country, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, phone_number, user_permissions
+ERROR 2025-12-04 10:48:12,992 log 16340 31376 Internal Server Error: /users/email-confirm/a7264410608dd07498f84d3a24473e91/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\днс\PycharmProjects\MailinglistManagementService\users\views.py", line 40, in email_verification
+    user = get_object_or_404(User, token=token)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 621, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1495, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1513, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\query.py", line 1523, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'token' into field. Choices are: avatar, country, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, phone_number, user_permissions
+ERROR 2025-12-04 10:48:13,003 basehttp 16340 31376 "GET /users/email-confirm/a7264410608dd07498f84d3a24473e91/ HTTP/1.1" 500 120632
+ERROR 2025-12-04 10:48:13,003 basehttp 16340 31376 "GET /users/email-confirm/a7264410608dd07498f84d3a24473e91/ HTTP/1.1" 500 120632
+INFO 2025-12-04 10:51:10,052 autoreload 16340 25372 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\models.py changed, reloading.
+INFO 2025-12-04 10:51:10,052 autoreload 16340 25372 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\models.py changed, reloading.
+INFO 2025-12-04 10:51:11,143 autoreload 28384 18444 Watching for file changes with StatReloader
+INFO 2025-12-04 10:51:11,143 autoreload 28384 18444 Watching for file changes with StatReloader
+INFO 2025-12-04 10:51:59,025 autoreload 25848 31732 Watching for file changes with StatReloader
+INFO 2025-12-04 10:51:59,025 autoreload 25848 31732 Watching for file changes with StatReloader
+WARNING 2025-12-04 10:52:00,542 log 25848 27488 Not Found: /
+WARNING 2025-12-04 10:52:00,542 log 25848 27488 Not Found: /
+WARNING 2025-12-04 10:52:00,543 basehttp 25848 27488 "GET / HTTP/1.1" 404 2458
+WARNING 2025-12-04 10:52:00,543 basehttp 25848 27488 "GET / HTTP/1.1" 404 2458
+INFO 2025-12-04 10:52:12,605 basehttp 25848 26744 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:52:12,605 basehttp 25848 26744 "GET /mailings/home/ HTTP/1.1" 200 11075
+INFO 2025-12-04 10:52:14,173 basehttp 25848 26744 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:52:14,173 basehttp 25848 26744 "GET /users/register/ HTTP/1.1" 200 4929
+INFO 2025-12-04 10:52:26,531 basehttp 25848 29228 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:52:26,531 basehttp 25848 29228 "POST /users/register/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:52:26,556 basehttp 25848 29228 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:52:26,556 basehttp 25848 29228 "GET /users/login/ HTTP/1.1" 200 3809
+INFO 2025-12-04 10:52:36,292 basehttp 25848 11000 "GET /users/email-confirm/fb6b98436482327304a0ef8ee5693a18 HTTP/1.1" 301 0
+INFO 2025-12-04 10:52:36,292 basehttp 25848 11000 "GET /users/email-confirm/fb6b98436482327304a0ef8ee5693a18 HTTP/1.1" 301 0
+INFO 2025-12-04 10:52:37,201 basehttp 25848 14356 "GET /users/email-confirm/fb6b98436482327304a0ef8ee5693a18/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:52:37,201 basehttp 25848 14356 "GET /users/email-confirm/fb6b98436482327304a0ef8ee5693a18/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:52:37,253 basehttp 25848 14356 "GET /users/login/ HTTP/1.1" 200 3794
+INFO 2025-12-04 10:52:37,253 basehttp 25848 14356 "GET /users/login/ HTTP/1.1" 200 3794
+INFO 2025-12-04 10:53:02,892 basehttp 25848 31180 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 10:53:02,892 basehttp 25848 31180 "POST /users/login/ HTTP/1.1" 302 0
+WARNING 2025-12-04 10:53:02,901 log 25848 31180 Not Found: /users/login/recipients/recipient_list/
+WARNING 2025-12-04 10:53:02,901 log 25848 31180 Not Found: /users/login/recipients/recipient_list/
+WARNING 2025-12-04 10:53:02,902 basehttp 25848 31180 "GET /users/login/recipients/recipient_list/ HTTP/1.1" 404 3792
+WARNING 2025-12-04 10:53:02,902 basehttp 25848 31180 "GET /users/login/recipients/recipient_list/ HTTP/1.1" 404 3792
+INFO 2025-12-04 11:20:09,152 autoreload 25848 31732 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:20:09,152 autoreload 25848 31732 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:20:10,268 autoreload 27856 23168 Watching for file changes with StatReloader
+INFO 2025-12-04 11:20:10,268 autoreload 27856 23168 Watching for file changes with StatReloader
+INFO 2025-12-04 11:20:58,121 autoreload 27856 23168 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:20:58,121 autoreload 27856 23168 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:20:58,948 autoreload 11452 25772 Watching for file changes with StatReloader
+INFO 2025-12-04 11:20:58,948 autoreload 11452 25772 Watching for file changes with StatReloader
+INFO 2025-12-04 11:20:59,491 basehttp 11452 20500 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:20:59,491 basehttp 11452 20500 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:21:08,368 basehttp 11452 20500 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:21:08,368 basehttp 11452 20500 "POST /users/login/ HTTP/1.1" 302 0
+WARNING 2025-12-04 11:21:08,380 log 11452 20500 Not Found: /home/
+WARNING 2025-12-04 11:21:08,380 log 11452 20500 Not Found: /home/
+WARNING 2025-12-04 11:21:08,381 basehttp 11452 20500 "GET /home/ HTTP/1.1" 404 2491
+WARNING 2025-12-04 11:21:08,381 basehttp 11452 20500 "GET /home/ HTTP/1.1" 404 2491
+INFO 2025-12-04 11:21:23,803 autoreload 11452 25772 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:21:23,803 autoreload 11452 25772 C:\Users\днс\PycharmProjects\MailinglistManagementService\config\settings.py changed, reloading.
+INFO 2025-12-04 11:21:24,621 autoreload 1036 28928 Watching for file changes with StatReloader
+INFO 2025-12-04 11:21:24,621 autoreload 1036 28928 Watching for file changes with StatReloader
+INFO 2025-12-04 11:21:25,137 basehttp 1036 26652 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:21:25,137 basehttp 1036 26652 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:21:34,428 basehttp 1036 31740 "POST /users/login/ HTTP/1.1" 200 4688
+INFO 2025-12-04 11:21:34,428 basehttp 1036 31740 "POST /users/login/ HTTP/1.1" 200 4688
+INFO 2025-12-04 11:21:40,090 basehttp 1036 2036 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:21:40,090 basehttp 1036 2036 "POST /users/login/ HTTP/1.1" 302 0
+WARNING 2025-12-04 11:21:40,099 log 1036 2036 Not Found: /users/login/mailings/home/
+WARNING 2025-12-04 11:21:40,099 log 1036 2036 Not Found: /users/login/mailings/home/
+WARNING 2025-12-04 11:21:40,100 basehttp 1036 2036 "GET /users/login/mailings/home/ HTTP/1.1" 404 3756
+WARNING 2025-12-04 11:21:40,100 basehttp 1036 2036 "GET /users/login/mailings/home/ HTTP/1.1" 404 3756
+INFO 2025-12-04 11:24:24,154 autoreload 1036 28928 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\urls.py changed, reloading.
+INFO 2025-12-04 11:24:24,154 autoreload 1036 28928 C:\Users\днс\PycharmProjects\MailinglistManagementService\users\urls.py changed, reloading.
+INFO 2025-12-04 11:24:25,358 autoreload 26432 24448 Watching for file changes with StatReloader
+INFO 2025-12-04 11:24:25,358 autoreload 26432 24448 Watching for file changes with StatReloader
+WARNING 2025-12-04 11:24:28,233 log 26432 10388 Forbidden (CSRF token from POST incorrect.): /users/login/
+WARNING 2025-12-04 11:24:28,233 log 26432 10388 Forbidden (CSRF token from POST incorrect.): /users/login/
+WARNING 2025-12-04 11:24:28,234 basehttp 26432 10388 "POST /users/login/ HTTP/1.1" 403 2503
+WARNING 2025-12-04 11:24:28,234 basehttp 26432 10388 "POST /users/login/ HTTP/1.1" 403 2503
+INFO 2025-12-04 11:24:30,418 basehttp 26432 30280 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:24:30,418 basehttp 26432 30280 "GET /users/login/ HTTP/1.1" 200 4511
+INFO 2025-12-04 11:24:36,326 basehttp 26432 30280 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:24:36,326 basehttp 26432 30280 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:24:36,449 basehttp 26432 30280 "GET /mailings/home/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:36,449 basehttp 26432 30280 "GET /mailings/home/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:42,974 basehttp 26432 23620 "GET /mailings/home/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:42,974 basehttp 26432 23620 "GET /mailings/home/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:44,047 basehttp 26432 23620 "GET /mailings/mailings/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:44,047 basehttp 26432 23620 "GET /mailings/mailings/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:45,483 basehttp 26432 23620 "GET /mailings/mailings/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:45,483 basehttp 26432 23620 "GET /mailings/mailings/ HTTP/1.1" 200 12043
+INFO 2025-12-04 11:24:47,980 basehttp 26432 23620 "GET /mailings/recipients/ HTTP/1.1" 200 5394
+INFO 2025-12-04 11:24:47,980 basehttp 26432 23620 "GET /mailings/recipients/ HTTP/1.1" 200 5394
+INFO 2025-12-04 11:26:00,574 basehttp 26432 28460 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 11:26:00,574 basehttp 26432 28460 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 11:26:02,056 basehttp 26432 28460 "GET /mailings/messages/ HTTP/1.1" 200 5300
+INFO 2025-12-04 11:26:02,056 basehttp 26432 28460 "GET /mailings/messages/ HTTP/1.1" 200 5300
+INFO 2025-12-04 11:26:11,950 basehttp 26432 28212 "GET /mailings/mailing/create/ HTTP/1.1" 200 6188
+INFO 2025-12-04 11:26:11,950 basehttp 26432 28212 "GET /mailings/mailing/create/ HTTP/1.1" 200 6188
+INFO 2025-12-04 11:26:15,091 basehttp 26432 28212 "GET /mailings/messages/ HTTP/1.1" 200 5300
+INFO 2025-12-04 11:26:15,091 basehttp 26432 28212 "GET /mailings/messages/ HTTP/1.1" 200 5300
+INFO 2025-12-04 11:26:36,530 basehttp 26432 31556 "POST /users/logout/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:26:36,530 basehttp 26432 31556 "POST /users/logout/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:26:36,540 basehttp 26432 31556 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:26:36,540 basehttp 26432 31556 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:26:38,836 basehttp 26432 31556 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:26:38,836 basehttp 26432 31556 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:26:58,788 basehttp 26432 31552 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:26:58,788 basehttp 26432 31552 "GET /users/login/ HTTP/1.1" 200 3543
+INFO 2025-12-04 11:28:05,635 basehttp 26432 31576 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 11:28:05,635 basehttp 26432 31576 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 11:28:10,820 basehttp 26432 31504 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 11:28:10,820 basehttp 26432 31504 "POST /users/login/ HTTP/1.1" 200 3720
+INFO 2025-12-04 11:28:16,638 basehttp 26432 31504 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:28:16,638 basehttp 26432 31504 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-12-04 11:28:16,726 basehttp 26432 31504 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 11:28:16,726 basehttp 26432 31504 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 11:54:47,435 autoreload 26432 24448 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:54:47,435 autoreload 26432 24448 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:54:49,157 autoreload 32628 17744 Watching for file changes with StatReloader
+INFO 2025-12-04 11:54:49,157 autoreload 32628 17744 Watching for file changes with StatReloader
+INFO 2025-12-04 11:56:33,810 autoreload 32628 17744 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:56:33,810 autoreload 32628 17744 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:56:34,624 autoreload 8840 33020 Watching for file changes with StatReloader
+INFO 2025-12-04 11:56:34,624 autoreload 8840 33020 Watching for file changes with StatReloader
+INFO 2025-12-04 11:58:52,493 autoreload 8840 33020 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:58:52,493 autoreload 8840 33020 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 11:58:53,365 autoreload 32884 31172 Watching for file changes with StatReloader
+INFO 2025-12-04 11:58:53,365 autoreload 32884 31172 Watching for file changes with StatReloader
+INFO 2025-12-04 11:59:56,355 basehttp 32884 29628 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 11:59:56,355 basehttp 32884 29628 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 11:59:59,815 basehttp 32884 29628 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 11:59:59,815 basehttp 32884 29628 "GET /mailings/home/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:00:40,111 autoreload 32884 31172 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 12:00:40,111 autoreload 32884 31172 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 12:00:40,903 autoreload 32740 24676 Watching for file changes with StatReloader
+INFO 2025-12-04 12:00:40,903 autoreload 32740 24676 Watching for file changes with StatReloader
+INFO 2025-12-04 12:01:04,442 autoreload 32740 24676 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 12:01:04,442 autoreload 32740 24676 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\urls.py changed, reloading.
+INFO 2025-12-04 12:01:05,294 autoreload 2740 32808 Watching for file changes with StatReloader
+INFO 2025-12-04 12:01:05,294 autoreload 2740 32808 Watching for file changes with StatReloader
+INFO 2025-12-04 12:01:05,773 basehttp 2740 31560 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:05,773 basehttp 2740 31560 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:13,448 basehttp 2740 33276 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:01:13,448 basehttp 2740 33276 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:01:27,599 basehttp 2740 24668 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:27,599 basehttp 2740 24668 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:45,250 autoreload 2740 32808 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:01:45,250 autoreload 2740 32808 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:01:46,096 autoreload 25540 24460 Watching for file changes with StatReloader
+INFO 2025-12-04 12:01:46,096 autoreload 25540 24460 Watching for file changes with StatReloader
+INFO 2025-12-04 12:01:46,666 basehttp 25540 31564 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:46,666 basehttp 25540 31564 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:01:52,185 basehttp 25540 31564 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:01:52,185 basehttp 25540 31564 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:01:55,260 basehttp 25540 25272 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:01:55,260 basehttp 25540 25272 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:03:53,058 autoreload 25540 24460 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:03:53,058 autoreload 25540 24460 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:03:53,921 autoreload 33692 29916 Watching for file changes with StatReloader
+INFO 2025-12-04 12:03:53,921 autoreload 33692 29916 Watching for file changes with StatReloader
+INFO 2025-12-04 12:03:55,951 basehttp 33692 33256 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:03:55,951 basehttp 33692 33256 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:03:57,972 basehttp 33692 31448 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:03:57,972 basehttp 33692 31448 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:05:46,717 autoreload 33692 29916 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 12:05:46,717 autoreload 33692 29916 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 12:05:47,423 autoreload 33404 26684 Watching for file changes with StatReloader
+INFO 2025-12-04 12:05:47,423 autoreload 33404 26684 Watching for file changes with StatReloader
+INFO 2025-12-04 12:06:43,844 basehttp 33404 28540 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:06:43,844 basehttp 33404 28540 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:07:02,741 autoreload 33404 26684 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:07:02,741 autoreload 33404 26684 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\views.py changed, reloading.
+INFO 2025-12-04 12:07:03,624 autoreload 32396 32980 Watching for file changes with StatReloader
+INFO 2025-12-04 12:07:03,624 autoreload 32396 32980 Watching for file changes with StatReloader
+INFO 2025-12-04 12:07:05,306 basehttp 32396 32976 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:07:05,306 basehttp 32396 32976 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:07:08,572 basehttp 32396 30988 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:07:08,572 basehttp 32396 30988 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:07:16,468 basehttp 32396 30988 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:07:16,468 basehttp 32396 30988 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:07:21,219 basehttp 32396 27052 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:07:21,219 basehttp 32396 27052 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:07:25,107 basehttp 32396 27052 "GET /mailings/mailing/10/ HTTP/1.1" 200 5960
+INFO 2025-12-04 12:07:25,107 basehttp 32396 27052 "GET /mailings/mailing/10/ HTTP/1.1" 200 5960
+INFO 2025-12-04 12:07:28,305 basehttp 32396 2760 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:07:28,305 basehttp 32396 2760 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:08:01,169 basehttp 32396 5672 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:08:01,169 basehttp 32396 5672 "GET /mailings/mailing/5/ HTTP/1.1" 200 5957
+INFO 2025-12-04 12:08:06,548 basehttp 32396 5672 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:08:06,548 basehttp 32396 5672 "GET /mailings/mailings/ HTTP/1.1" 200 12139
+INFO 2025-12-04 12:09:12,688 basehttp 32396 32772 "GET /mailings/mailings/ HTTP/1.1" 200 11932
+INFO 2025-12-04 12:09:12,688 basehttp 32396 32772 "GET /mailings/mailings/ HTTP/1.1" 200 11932
+INFO 2025-12-04 12:09:38,130 basehttp 32396 27512 "GET /mailings/mailings/ HTTP/1.1" 200 11725
+INFO 2025-12-04 12:09:38,130 basehttp 32396 27512 "GET /mailings/mailings/ HTTP/1.1" 200 11725
+INFO 2025-12-04 12:10:02,110 basehttp 32396 10584 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:10:02,110 basehttp 32396 10584 "GET /mailings/home/ HTTP/1.1" 200 4776
+INFO 2025-12-04 12:11:45,140 basehttp 32396 2704 "GET /mailings/home/ HTTP/1.1" 200 4894
+INFO 2025-12-04 12:11:45,140 basehttp 32396 2704 "GET /mailings/home/ HTTP/1.1" 200 4894
+INFO 2025-12-04 12:11:46,417 basehttp 32396 2704 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 13759
+INFO 2025-12-04 12:11:46,417 basehttp 32396 2704 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 13759
+INFO 2025-12-04 12:12:39,757 basehttp 32396 5708 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+INFO 2025-12-04 12:12:39,757 basehttp 32396 5708 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+INFO 2025-12-04 12:15:54,166 basehttp 32396 30588 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+INFO 2025-12-04 12:15:54,166 basehttp 32396 30588 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+INFO 2025-12-04 12:15:55,259 basehttp 32396 30588 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+INFO 2025-12-04 12:15:55,259 basehttp 32396 30588 "GET /mailings/mailings/ HTTP/1.1" 200 11627
+ERROR 2025-12-04 12:17:39,848 log 32396 33476 Internal Server Error: /mailings/mailings/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\urls\base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'mailing'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\urls\base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'mailing' is not a registered namespace
+ERROR 2025-12-04 12:17:39,848 log 32396 33476 Internal Server Error: /mailings/mailings/
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\urls\base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'mailing'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 164, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\poetry\virtualenvs\mailinglistmanagementservice-ZV7-JGul-py3.13\Lib\site-packages\django\urls\base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'mailing' is not a registered namespace
+ERROR 2025-12-04 12:17:39,870 basehttp 32396 33476 "GET /mailings/mailings/ HTTP/1.1" 500 185413
+ERROR 2025-12-04 12:17:39,870 basehttp 32396 33476 "GET /mailings/mailings/ HTTP/1.1" 500 185413
+INFO 2025-12-04 12:17:51,400 basehttp 32396 27200 "GET /mailings/mailings/ HTTP/1.1" 200 11741
+INFO 2025-12-04 12:17:51,400 basehttp 32396 27200 "GET /mailings/mailings/ HTTP/1.1" 200 11741
+INFO 2025-12-04 12:17:54,038 basehttp 32396 27732 "GET /mailings/mailing/create/ HTTP/1.1" 200 6306
+INFO 2025-12-04 12:17:54,038 basehttp 32396 27732 "GET /mailings/mailing/create/ HTTP/1.1" 200 6306
+INFO 2025-12-04 12:18:02,029 basehttp 32396 27732 "GET /mailings/mailing/create/ HTTP/1.1" 200 6306
+INFO 2025-12-04 12:18:02,029 basehttp 32396 27732 "GET /mailings/mailing/create/ HTTP/1.1" 200 6306
+INFO 2025-12-04 12:18:19,436 basehttp 32396 30008 "POST /mailings/mailing/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:18:19,436 basehttp 32396 30008 "POST /mailings/mailing/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:18:19,528 basehttp 32396 30008 "GET /mailings/mailings/ HTTP/1.1" 200 12595
+INFO 2025-12-04 12:18:19,528 basehttp 32396 30008 "GET /mailings/mailings/ HTTP/1.1" 200 12595
+INFO 2025-12-04 12:18:26,907 basehttp 32396 30008 "GET /mailings/mailing/11/ HTTP/1.1" 200 6250
+INFO 2025-12-04 12:18:26,907 basehttp 32396 30008 "GET /mailings/mailing/11/ HTTP/1.1" 200 6250
+INFO 2025-12-04 12:18:51,914 basehttp 32396 31904 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:18:51,914 basehttp 32396 31904 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:18:57,674 basehttp 32396 31904 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:18:57,674 basehttp 32396 31904 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:18:59,572 basehttp 32396 31488 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 12:18:59,572 basehttp 32396 31488 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 12:19:59,175 basehttp 32396 27356 "GET /mailings/messages/ HTTP/1.1" 200 5416
+INFO 2025-12-04 12:19:59,175 basehttp 32396 27356 "GET /mailings/messages/ HTTP/1.1" 200 5416
+INFO 2025-12-04 12:20:00,845 basehttp 32396 27356 "GET /mailings/message/create/ HTTP/1.1" 200 5188
+INFO 2025-12-04 12:20:00,845 basehttp 32396 27356 "GET /mailings/message/create/ HTTP/1.1" 200 5188
+INFO 2025-12-04 12:20:16,235 basehttp 32396 22252 "POST /mailings/message/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:20:16,235 basehttp 32396 22252 "POST /mailings/message/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:20:16,428 basehttp 32396 22252 "GET /mailings/messages/ HTTP/1.1" 200 6151
+INFO 2025-12-04 12:20:16,428 basehttp 32396 22252 "GET /mailings/messages/ HTTP/1.1" 200 6151
+INFO 2025-12-04 12:20:22,068 basehttp 32396 32752 "GET /mailings/message/create/ HTTP/1.1" 200 5188
+INFO 2025-12-04 12:20:22,068 basehttp 32396 32752 "GET /mailings/message/create/ HTTP/1.1" 200 5188
+INFO 2025-12-04 12:20:34,633 basehttp 32396 30908 "POST /mailings/message/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:20:34,633 basehttp 32396 30908 "POST /mailings/message/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:20:34,702 basehttp 32396 30908 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 12:20:34,702 basehttp 32396 30908 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 12:20:38,376 basehttp 32396 30908 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 12:20:38,376 basehttp 32396 30908 "GET /mailings/recipients/ HTTP/1.1" 200 5490
+INFO 2025-12-04 12:21:48,005 basehttp 32396 27796 "GET /mailings/recipients/ HTTP/1.1" 200 5623
+INFO 2025-12-04 12:21:48,005 basehttp 32396 27796 "GET /mailings/recipients/ HTTP/1.1" 200 5623
+INFO 2025-12-04 12:21:50,650 basehttp 32396 32244 "GET /mailings/recipient/create/ HTTP/1.1" 200 5495
+INFO 2025-12-04 12:21:50,650 basehttp 32396 32244 "GET /mailings/recipient/create/ HTTP/1.1" 200 5495
+INFO 2025-12-04 12:22:03,367 basehttp 32396 30088 "POST /mailings/recipient/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:22:03,367 basehttp 32396 30088 "POST /mailings/recipient/create/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:22:03,438 basehttp 32396 30088 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 12:22:03,438 basehttp 32396 30088 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 12:22:07,702 basehttp 32396 30088 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:22:07,702 basehttp 32396 30088 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:22:16,003 basehttp 32396 33576 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:22:16,003 basehttp 32396 33576 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:22:23,413 basehttp 32396 29348 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:22:23,413 basehttp 32396 29348 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:22:26,137 models 32396 29348 Начало ручной отправки рассылки ID:11, Тема: 'отправка первого письма'
+INFO 2025-12-04 12:22:26,142 models 32396 29348 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 12:22:26,977 models 32396 29348 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 12:22:26,983 models 32396 29348 Рассылка 'отправка первого письма' завершена: 
+INFO 2025-12-04 12:22:26,985 basehttp 32396 29348 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:22:26,985 basehttp 32396 29348 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:22:27,065 basehttp 32396 29348 "GET /mailings/mailing/11/ HTTP/1.1" 200 6485
+INFO 2025-12-04 12:22:27,065 basehttp 32396 29348 "GET /mailings/mailing/11/ HTTP/1.1" 200 6485
+INFO 2025-12-04 12:22:34,658 basehttp 32396 28048 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:22:34,658 basehttp 32396 28048 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:23:39,502 basehttp 32396 29276 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:23:39,502 basehttp 32396 29276 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 12:23:42,413 basehttp 32396 29276 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:23:42,413 basehttp 32396 29276 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:23:45,213 basehttp 32396 29276 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 14338
+INFO 2025-12-04 12:23:45,213 basehttp 32396 29276 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 14338
+INFO 2025-12-04 12:23:49,260 basehttp 32396 29276 "GET /mailings/mailing_attempts/15/ HTTP/1.1" 200 4533
+INFO 2025-12-04 12:23:49,260 basehttp 32396 29276 "GET /mailings/mailing_attempts/15/ HTTP/1.1" 200 4533
+INFO 2025-12-04 12:23:54,593 basehttp 32396 29276 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:23:54,593 basehttp 32396 29276 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:23:55,856 basehttp 32396 29276 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:23:55,856 basehttp 32396 29276 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:24:40,528 models 32396 29276 Начало ручной отправки рассылки ID:11, Тема: 'отправка первого письма'
+INFO 2025-12-04 12:24:40,531 models 32396 29276 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 12:24:41,180 models 32396 29276 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 12:24:41,182 models 32396 29276 Рассылка 'отправка первого письма' завершена: 
+INFO 2025-12-04 12:24:41,183 basehttp 32396 29276 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:24:41,183 basehttp 32396 29276 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:24:41,267 basehttp 32396 29276 "GET /mailings/mailing/11/ HTTP/1.1" 200 6485
+INFO 2025-12-04 12:24:41,267 basehttp 32396 29276 "GET /mailings/mailing/11/ HTTP/1.1" 200 6485
+INFO 2025-12-04 12:24:53,812 basehttp 32396 29276 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 15035
+INFO 2025-12-04 12:24:53,812 basehttp 32396 29276 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 15035
+INFO 2025-12-04 12:26:56,611 autoreload 32396 32980 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 12:26:56,611 autoreload 32396 32980 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 12:26:57,729 autoreload 17984 24588 Watching for file changes with StatReloader
+INFO 2025-12-04 12:26:57,729 autoreload 17984 24588 Watching for file changes with StatReloader
+INFO 2025-12-04 12:28:03,631 basehttp 17984 25884 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:28:03,631 basehttp 17984 25884 "GET /mailings/mailings/ HTTP/1.1" 200 12477
+INFO 2025-12-04 12:28:09,329 basehttp 17984 19396 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:28:09,329 basehttp 17984 19396 "GET /mailings/mailing/11/ HTTP/1.1" 200 6132
+INFO 2025-12-04 12:28:10,874 basehttp 17984 19396 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:28:10,874 basehttp 17984 19396 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:28:20,581 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 200 6635
+INFO 2025-12-04 12:28:20,581 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 200 6635
+INFO 2025-12-04 12:28:23,026 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 200 6635
+INFO 2025-12-04 12:28:23,026 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 200 6635
+INFO 2025-12-04 12:28:34,442 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:28:34,442 basehttp 17984 32408 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:28:34,537 basehttp 17984 32408 "GET /mailings/mailing/11/ HTTP/1.1" 200 6161
+INFO 2025-12-04 12:28:34,537 basehttp 17984 32408 "GET /mailings/mailing/11/ HTTP/1.1" 200 6161
+INFO 2025-12-04 12:30:08,369 basehttp 17984 25608 "GET /mailings/mailing/11/ HTTP/1.1" 200 6129
+INFO 2025-12-04 12:30:08,369 basehttp 17984 25608 "GET /mailings/mailing/11/ HTTP/1.1" 200 6129
+INFO 2025-12-04 12:30:12,450 models 17984 30672 Начало ручной отправки рассылки ID:11, Тема: 'отправка первого письма'
+WARNING 2025-12-04 12:30:12,450 models 17984 30672 Валидация времени для рассылки ID:11 не пройдена: Ошибка: Невозможно запустить рассылку 'отправка первого письма'. Текущее время 2025-12-04 12:30:12 не находится между 2025-12-05 12:29:00 и 2026-01-01 12:18:00.
+INFO 2025-12-04 12:30:12,452 basehttp 17984 30672 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:30:12,452 basehttp 17984 30672 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:30:12,541 basehttp 17984 30672 "GET /mailings/mailing/11/ HTTP/1.1" 200 6641
+INFO 2025-12-04 12:30:12,541 basehttp 17984 30672 "GET /mailings/mailing/11/ HTTP/1.1" 200 6641
+INFO 2025-12-04 12:30:34,763 basehttp 17984 30112 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:30:34,763 basehttp 17984 30112 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:30:42,892 basehttp 17984 31652 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:30:42,892 basehttp 17984 31652 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:30:42,976 basehttp 17984 31652 "GET /mailings/mailing/11/ HTTP/1.1" 200 6129
+INFO 2025-12-04 12:30:42,976 basehttp 17984 31652 "GET /mailings/mailing/11/ HTTP/1.1" 200 6129
+INFO 2025-12-04 12:31:16,220 models 17984 26376 Начало ручной отправки рассылки ID:11, Тема: 'отправка первого письма'
+INFO 2025-12-04 12:31:16,224 models 17984 26376 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 12:31:17,235 models 17984 26376 Успешно отправлено клиенту tatianaarsentievna@gmail.com для рассылки ID:11.
+INFO 2025-12-04 12:31:17,238 models 17984 26376 Рассылка 'отправка первого письма' завершена: 
+INFO 2025-12-04 12:31:17,238 basehttp 17984 26376 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:31:17,238 basehttp 17984 26376 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:31:17,340 basehttp 17984 26376 "GET /mailings/mailing/11/ HTTP/1.1" 200 6482
+INFO 2025-12-04 12:31:17,340 basehttp 17984 26376 "GET /mailings/mailing/11/ HTTP/1.1" 200 6482
+INFO 2025-12-04 12:31:41,330 basehttp 17984 32080 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:31:41,330 basehttp 17984 32080 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 12:31:54,324 basehttp 17984 30964 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:31:54,324 basehttp 17984 30964 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:31:54,411 basehttp 17984 30964 "GET /mailings/mailing/11/ HTTP/1.1" 200 6291
+INFO 2025-12-04 12:31:54,411 basehttp 17984 30964 "GET /mailings/mailing/11/ HTTP/1.1" 200 6291
+INFO 2025-12-04 12:32:26,762 models 17984 24028 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 12:32:26,768 models 17984 24028 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 12:32:27,427 models 17984 24028 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 12:32:27,430 models 17984 24028 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 12:32:27,431 basehttp 17984 24028 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:32:27,431 basehttp 17984 24028 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 12:32:27,624 basehttp 17984 24028 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 12:32:27,624 basehttp 17984 24028 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 13:22:34,158 autoreload 17984 24588 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:22:34,158 autoreload 17984 24588 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:22:35,718 autoreload 23312 21712 Watching for file changes with StatReloader
+INFO 2025-12-04 13:22:35,718 autoreload 23312 21712 Watching for file changes with StatReloader
+INFO 2025-12-04 13:22:45,290 autoreload 23312 21712 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:22:45,290 autoreload 23312 21712 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:22:46,144 autoreload 9168 4512 Watching for file changes with StatReloader
+INFO 2025-12-04 13:22:46,144 autoreload 9168 4512 Watching for file changes with StatReloader
+INFO 2025-12-04 13:23:31,400 models 9168 29216 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 13:23:31,408 models 9168 29216 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 13:23:32,303 models 9168 29216 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 13:23:32,306 models 9168 29216 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 13:23:32,316 basehttp 9168 29216 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:23:32,316 basehttp 9168 29216 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:23:32,447 basehttp 9168 29216 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 13:23:32,447 basehttp 9168 29216 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 13:29:04,541 models 9168 34780 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 13:29:04,552 models 9168 34780 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 13:29:05,271 models 9168 34780 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 13:29:05,275 models 9168 34780 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 13:29:05,277 basehttp 9168 34780 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:29:05,277 basehttp 9168 34780 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:29:05,365 basehttp 9168 34780 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 13:29:05,365 basehttp 9168 34780 "GET /mailings/mailing/11/ HTTP/1.1" 200 6631
+INFO 2025-12-04 13:31:57,505 basehttp 9168 11936 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:31:57,505 basehttp 9168 11936 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:32:15,756 basehttp 9168 32364 "GET /mailings/mailing_attempts/20/ HTTP/1.1" 200 4532
+INFO 2025-12-04 13:32:15,756 basehttp 9168 32364 "GET /mailings/mailing_attempts/20/ HTTP/1.1" 200 4532
+INFO 2025-12-04 13:33:52,327 basehttp 9168 5676 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:33:52,327 basehttp 9168 5676 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:33:54,813 basehttp 9168 5676 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:33:54,813 basehttp 9168 5676 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 17821
+INFO 2025-12-04 13:33:55,858 basehttp 9168 5676 "GET /mailings/mailings/ HTTP/1.1" 200 12464
+INFO 2025-12-04 13:33:55,858 basehttp 9168 5676 "GET /mailings/mailings/ HTTP/1.1" 200 12464
+INFO 2025-12-04 13:33:57,699 basehttp 9168 10416 "GET /mailings/mailing/11/ HTTP/1.1" 200 6291
+INFO 2025-12-04 13:33:57,699 basehttp 9168 10416 "GET /mailings/mailing/11/ HTTP/1.1" 200 6291
+INFO 2025-12-04 13:33:59,406 basehttp 9168 10416 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6444
+INFO 2025-12-04 13:33:59,406 basehttp 9168 10416 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6444
+INFO 2025-12-04 13:34:11,806 basehttp 9168 31048 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:34:11,806 basehttp 9168 31048 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:34:11,898 basehttp 9168 31048 "GET /mailings/mailing/11/ HTTP/1.1" 200 6119
+INFO 2025-12-04 13:34:11,898 basehttp 9168 31048 "GET /mailings/mailing/11/ HTTP/1.1" 200 6119
+INFO 2025-12-04 13:35:08,280 models 9168 27416 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 13:35:08,285 models 9168 27416 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 13:35:09,094 models 9168 27416 Успешно отправлено клиенту tatianaarsentievna@gmail.com для рассылки ID:11.
+INFO 2025-12-04 13:35:09,097 models 9168 27416 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 13:35:09,098 basehttp 9168 27416 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:35:09,098 basehttp 9168 27416 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:35:09,184 basehttp 9168 27416 "GET /mailings/mailing/11/ HTTP/1.1" 200 6459
+INFO 2025-12-04 13:35:09,184 basehttp 9168 27416 "GET /mailings/mailing/11/ HTTP/1.1" 200 6459
+INFO 2025-12-04 13:39:20,256 autoreload 9168 4512 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:39:20,256 autoreload 9168 4512 C:\Users\днс\PycharmProjects\MailinglistManagementService\mailings\models.py changed, reloading.
+INFO 2025-12-04 13:39:21,366 autoreload 32292 19312 Watching for file changes with StatReloader
+INFO 2025-12-04 13:39:21,366 autoreload 32292 19312 Watching for file changes with StatReloader
+INFO 2025-12-04 13:39:31,125 models 32292 34784 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 13:39:31,129 models 32292 34784 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 13:39:31,700 models 32292 34784 Успешно отправлено клиенту tatianaarsentievna@gmail.com для рассылки ID:11.
+INFO 2025-12-04 13:39:32,317 models 32292 34784 Успешно отправлено клиенту tkuleva@geely-iat.ru для рассылки ID:11.
+INFO 2025-12-04 13:39:32,318 models 32292 34784 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 13:39:32,325 basehttp 32292 34784 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:39:32,325 basehttp 32292 34784 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:39:32,445 basehttp 32292 34784 "GET /mailings/mailing/11/ HTTP/1.1" 200 6459
+INFO 2025-12-04 13:39:32,445 basehttp 32292 34784 "GET /mailings/mailing/11/ HTTP/1.1" 200 6459
+INFO 2025-12-04 13:40:01,029 basehttp 32292 33992 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 13:40:01,029 basehttp 32292 33992 "GET /mailings/mailing/11/update/ HTTP/1.1" 200 6435
+INFO 2025-12-04 13:40:13,399 basehttp 32292 34228 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:40:13,399 basehttp 32292 34228 "POST /mailings/mailing/11/update/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:40:13,482 basehttp 32292 34228 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:40:13,482 basehttp 32292 34228 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:41:02,344 models 32292 5288 Начало ручной отправки рассылки ID:11, Тема: 'третье сообщение'
+INFO 2025-12-04 13:41:02,351 models 32292 5288 Валидация для рассылки ID:11 пройдена. Начинается отправка писем.
+INFO 2025-12-04 13:41:03,136 models 32292 5288 Успешно отправлено клиенту test@mail.ru для рассылки ID:11.
+INFO 2025-12-04 13:41:03,810 models 32292 5288 Успешно отправлено клиенту tatianaarsentievna@gmail.com для рассылки ID:11.
+INFO 2025-12-04 13:41:04,656 models 32292 5288 Успешно отправлено клиенту tkuleva@geely-iat.ru для рассылки ID:11.
+INFO 2025-12-04 13:41:04,658 models 32292 5288 Рассылка 'третье сообщение' завершена: 
+INFO 2025-12-04 13:41:04,658 basehttp 32292 5288 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:41:04,658 basehttp 32292 5288 "POST /mailings/mailing/11/ HTTP/1.1" 302 0
+INFO 2025-12-04 13:41:04,747 basehttp 32292 5288 "GET /mailings/mailing/11/ HTTP/1.1" 200 6630
+INFO 2025-12-04 13:41:04,747 basehttp 32292 5288 "GET /mailings/mailing/11/ HTTP/1.1" 200 6630
+INFO 2025-12-04 13:41:53,691 basehttp 32292 34292 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:41:53,691 basehttp 32292 34292 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:41:57,407 basehttp 32292 34292 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:41:57,407 basehttp 32292 34292 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:42:00,546 basehttp 32292 34292 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:42:00,546 basehttp 32292 34292 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:42:07,165 basehttp 32292 30760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:42:07,165 basehttp 32292 30760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:42:22,708 basehttp 32292 31652 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:42:22,708 basehttp 32292 31652 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:42:23,355 basehttp 32292 23232 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:42:23,355 basehttp 32292 23232 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 13:42:25,610 basehttp 32292 23232 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:42:25,610 basehttp 32292 23232 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:43:41,030 basehttp 32292 31932 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:43:41,030 basehttp 32292 31932 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:43:42,566 basehttp 32292 31932 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 13:43:42,566 basehttp 32292 31932 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 13:43:44,473 basehttp 32292 31932 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 13:43:44,473 basehttp 32292 31932 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 13:43:45,949 basehttp 32292 31932 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:43:45,949 basehttp 32292 31932 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:44:46,746 basehttp 32292 29760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 22127
+INFO 2025-12-04 13:44:46,746 basehttp 32292 29760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 22127
+INFO 2025-12-04 13:44:51,127 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:44:51,127 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:44:52,828 basehttp 32292 29760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:44:52,828 basehttp 32292 29760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:44:58,133 basehttp 32292 29760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 22127
+INFO 2025-12-04 13:44:58,133 basehttp 32292 29760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 22127
+INFO 2025-12-04 13:45:28,941 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:45:28,941 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:45:32,495 basehttp 32292 29760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:45:32,495 basehttp 32292 29760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 13:45:39,203 basehttp 32292 29760 "GET /mailings/mailing/5/ HTTP/1.1" 200 5925
+INFO 2025-12-04 13:45:39,203 basehttp 32292 29760 "GET /mailings/mailing/5/ HTTP/1.1" 200 5925
+INFO 2025-12-04 13:45:43,376 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:45:43,376 basehttp 32292 29760 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 13:45:44,491 basehttp 32292 29760 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 13:45:44,491 basehttp 32292 29760 "GET /mailings/recipients/ HTTP/1.1" 200 6451
+INFO 2025-12-04 13:45:45,581 basehttp 32292 29760 "GET /mailings/recipient/2/ HTTP/1.1" 200 4802
+INFO 2025-12-04 13:45:45,581 basehttp 32292 29760 "GET /mailings/recipient/2/ HTTP/1.1" 200 4802
+INFO 2025-12-04 13:45:50,125 basehttp 32292 34544 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 13:45:50,125 basehttp 32292 34544 "GET /mailings/messages/ HTTP/1.1" 200 6886
+INFO 2025-12-04 13:45:51,218 basehttp 32292 34544 "GET /mailings/message/2/ HTTP/1.1" 200 4593
+INFO 2025-12-04 13:45:51,218 basehttp 32292 34544 "GET /mailings/message/2/ HTTP/1.1" 200 4593
+INFO 2025-12-04 13:45:55,017 basehttp 32292 34544 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:45:55,017 basehttp 32292 34544 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:45:56,615 basehttp 32292 34544 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4532
+INFO 2025-12-04 13:45:56,615 basehttp 32292 34544 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4532
+INFO 2025-12-04 13:46:01,104 basehttp 32292 28040 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 13:46:01,104 basehttp 32292 28040 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:52:03,789 basehttp 32292 15152 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:52:03,789 basehttp 32292 15152 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:52:07,068 basehttp 32292 34800 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4532
+INFO 2025-12-04 14:52:07,068 basehttp 32292 34800 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4532
+INFO 2025-12-04 14:54:52,645 basehttp 32292 35492 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4563
+INFO 2025-12-04 14:54:52,645 basehttp 32292 35492 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4563
+INFO 2025-12-04 14:55:08,299 basehttp 32292 29328 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 14:55:08,299 basehttp 32292 29328 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 14:55:46,179 basehttp 32292 7368 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:55:46,179 basehttp 32292 7368 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:55:47,530 basehttp 32292 7368 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4564
+INFO 2025-12-04 14:55:47,530 basehttp 32292 7368 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4564
+INFO 2025-12-04 14:55:52,781 basehttp 32292 7368 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 14:55:52,781 basehttp 32292 7368 "GET /mailings/home/ HTTP/1.1" 200 4777
+INFO 2025-12-04 14:55:54,581 basehttp 32292 7368 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:55:54,581 basehttp 32292 7368 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:55:57,519 basehttp 32292 7368 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 14:55:57,519 basehttp 32292 7368 "GET /mailings/mailings/ HTTP/1.1" 200 12463
+INFO 2025-12-04 14:56:51,523 basehttp 32292 30616 "GET /mailings/mailings/ HTTP/1.1" 200 12943
+INFO 2025-12-04 14:56:51,523 basehttp 32292 30616 "GET /mailings/mailings/ HTTP/1.1" 200 12943
+INFO 2025-12-04 14:57:17,055 basehttp 32292 35332 "GET /mailings/mailings/ HTTP/1.1" 200 12953
+INFO 2025-12-04 14:57:17,055 basehttp 32292 35332 "GET /mailings/mailings/ HTTP/1.1" 200 12953
+INFO 2025-12-04 14:57:38,985 basehttp 32292 19912 "GET /mailings/mailings/ HTTP/1.1" 200 13313
+INFO 2025-12-04 14:57:38,985 basehttp 32292 19912 "GET /mailings/mailings/ HTTP/1.1" 200 13313
+INFO 2025-12-04 14:58:11,919 basehttp 32292 28760 "GET /mailings/mailings/ HTTP/1.1" 200 14073
+INFO 2025-12-04 14:58:11,919 basehttp 32292 28760 "GET /mailings/mailings/ HTTP/1.1" 200 14073
+INFO 2025-12-04 14:58:15,312 basehttp 32292 28760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 14:58:15,312 basehttp 32292 28760 "GET /mailings/mailing/11/ HTTP/1.1" 200 6290
+INFO 2025-12-04 14:58:19,025 basehttp 32292 28760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:58:19,025 basehttp 32292 28760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 21997
+INFO 2025-12-04 14:58:54,665 basehttp 32292 33004 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4564
+INFO 2025-12-04 14:58:54,665 basehttp 32292 33004 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4564
+INFO 2025-12-04 15:01:00,963 basehttp 32292 33920 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4562
+INFO 2025-12-04 15:01:00,963 basehttp 32292 33920 "GET /mailings/mailing_attempts/26/ HTTP/1.1" 200 4562
+INFO 2025-12-04 15:01:02,393 basehttp 32292 33920 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 28809
+INFO 2025-12-04 15:01:02,393 basehttp 32292 33920 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 28809
+INFO 2025-12-04 15:12:46,689 basehttp 32292 33808 "POST /users/profile/edit/ HTTP/1.1" 200 5190
+INFO 2025-12-04 15:12:46,689 basehttp 32292 33808 "POST /users/profile/edit/ HTTP/1.1" 200 5190
+INFO 2025-12-04 15:12:52,184 basehttp 32292 34760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 28809
+INFO 2025-12-04 15:12:52,184 basehttp 32292 34760 "GET /mailings/mailing_attempts/ HTTP/1.1" 200 28809

@@ -1,4 +1,4 @@
-
+{% extends 'mailings/base.html' %}
 {% block content %}
 
 
@@ -13,9 +13,9 @@
                     <h1 class="card-title pricing-card-title"></h1>
 
                         <p><strong>Статус:</strong> {{ mailing_attempt.status }}</p>
-                        <p><strong>Ответ почтового серверае:</strong> {{ mailing_attempt.server_response }}</p>
-                        <p><strong>Тема письма:</strong> {{mailing_attempt.mailing.message.suvject}}</p>
-                        <p><strong>Количество получателей:</strong> {{mailing_attempt.mailing.recipients_count }}</p>
+                        <p><strong>Ответ почтового сервера:</strong> {{ mailing_attempt.server_response }}</p>
+                        <p><strong>Тема письма:</strong> {{mailing_attempt.mailing.message.subject}}</p>
+                        <p><strong>Количество получателей:</strong> {{mailing_attempt.mailing.recipients.count }}</p>
 
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_attempts_list' %}" role="button">Назад</a>
 

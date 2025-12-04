@@ -1,4 +1,4 @@
-
+{% extends 'mailings/base.html' %}
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Список попыток отправки</h1>
@@ -16,7 +16,9 @@
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title"></h1>
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
-                        <li class="mb-5"> {{mailing_attempt.timestamp}}</li>
+                        <li class="mb-5"> Дата и время попытки {{mailing_attempt.timestamp}}</li>
+                        <li class="mb-5"> Тема сообщения {{mailing_attempt.mailing.message.subject}}</li>
+                        <li class="mb-5"> Количество получателей рассылки {{mailing_attempt.mailing.recipients.count }}</li>
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_attempt_detail' mailing_attempt.pk %}" role="button">Подробнее</a>
 

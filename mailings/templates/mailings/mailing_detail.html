@@ -1,4 +1,4 @@
-
+{% extends 'mailings/base.html' %}
 {% block content %}
 
 
@@ -43,10 +43,10 @@
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_delete' object.pk %}" role="button">Удалить</a>
 
 
-                    <form method="post" action="{% url 'mailings:mailing_detail' object.pk %}">
-                        {% csrf_token %}
-                        <button type="submit" name="send_mailing" class="btn btn-primary">Отправить рассылку</button>
-                    </form>
+            <form method="post" action="{% url 'mailings:mailing_detail' object.pk %}">
+                {% csrf_token %}
+                <button type="submit" name="send_mailing" class="btn btn-primary">Отправить рассылку</button>
+            </form>
 
                     {% if messages %}
                         <ul class="messages">

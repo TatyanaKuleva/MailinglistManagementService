@@ -12,10 +12,32 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from .models import Recipient, Message, Mailing, MailingAttempt
 from .forms import RecipientForm, MessageForm, MailingForm
-from .services import send_mailing
-import logging
+from django.utils import timezone
+
+def home_view(request):
+    """
+    Отображает главную страницу с показателями рассылок и клиентов.
+    """
+    now = timezone.now()
+
+    total_mailings_count = Mailing.objects.count()
+
+    active_mailings_count = Mailing.objects.filter(
+        start_time__lte=now,
+        end_time__gte=now,
+        status= 'running'
+    ).count()
 
 
+    unique_recipients_count = Recipient.objects.count()
+
+    context = {
+        'total_mailings_count': total_mailings_count,
+        'active_mailings_count': active_mailings_count,
+        'unique_recipients_count': unique_recipients_count,
+    }
+
+    return render(request, 'mailings/home.html', context)
 
 
 class RecipientListView(ListView):

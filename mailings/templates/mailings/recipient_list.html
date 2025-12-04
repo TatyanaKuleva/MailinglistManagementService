@@ -1,8 +1,9 @@
-
+{% extends 'mailings/base.html' %}
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Список получателей</h1>
     <p class="lead">Список получателей</p>
+    <a class="btn btn-primary" href="{% url 'mailings:recipient_create' %}" role="button">Создать получателя письма</a>
 </div>
 {% if recipients %}
 <div class="container">
