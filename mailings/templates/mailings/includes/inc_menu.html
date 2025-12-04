@@ -1,0 +1,25 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Управление рассылками сообщений</h5>
+    <nav class="ms-5">
+      {% if user.is_authenticated %}
+        <a class="p-2 btn btn-outline-primary" href="{% url 'mailings:home'%}">Главная</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url 'mailings:mailing_list'%}">Рассылки</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url 'mailings:recipient_list'%}">Получатели</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url 'mailings:message_list'%}">Cообщения</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url 'mailings:mailing_attempts_list'%}">Попытки рассылок</a>
+
+         <form action="{% url 'users:profile_edit' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Редактировать профиль</button>
+                        </form>
+        <form action="{% url 'users:logout' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Выйти</button>
+                        </form>
+
+        {% else %}
+        <a class="btn btn-primary" href="{% url 'users:login' %}" role="button">Вход</a>
+        <a class="btn btn-primary" href="{% url 'users:register' %}" role="button">Регистрация</a>
+        {% endif %}
+    </nav>
+</div>

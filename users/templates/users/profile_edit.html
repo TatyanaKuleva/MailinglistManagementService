@@ -1,0 +1,36 @@
+{% extends 'mailings/base.html' %}
+
+{% block title %}Редактировать Профиль{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Редактировать Профиль</h3>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-success mt-3">Сохранить Изменения</button>
+                    </form>
+
+                    <hr class="mt-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -116,8 +116,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 #
 AUTH_USER_MODEL = 'users.CustomUser'
 #
-LOGIN_REDIRECT_URL = 'recipients/recipient_list/'
-LOGOUT_REDIRECT_URL = '/recipient_list/'
+LOGIN_REDIRECT_URL = 'mailings/home/'
+LOGOUT_REDIRECT_URL = '/home/'
 
 
 LOGIN_URL = 'users:login'
@@ -159,15 +159,15 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'INFO', # Можно поставить DEBUG для более подробных логов
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple' # Используйте 'verbose' для более полной информации
+            'formatter': 'simple'
         },
         'file': {
-            'level': 'INFO', # Можно поставить DEBUG
+            'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR, 'logs', 'django_mailing.log'), # Создайте папку 'logs'
-            'maxBytes': 1024*1024*5, # 5 MB
+            'maxBytes': 1024*1024*5,
             'backupCount': 5,
             'formatter': 'verbose',
         },
@@ -178,9 +178,9 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
-        'your_app_name': { # Укажите имя вашего приложения
+        'mailings': {
             'handlers': ['console', 'file'],
-            'level': 'DEBUG', # Здесь можно поставить DEBUG для детального логирования вашего приложения
+            'level': 'DEBUG',
             'propagate': False,
         },
     },

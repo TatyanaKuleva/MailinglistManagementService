@@ -113,7 +113,7 @@ class Mailing(models.Model):
         ordering = ['-start_time']
 
     def __str__(self):
-        return f"Рассылка '{self.message.subject}' с {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}"
+        return f"Рассылка '{self.message.subject}' с {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}, статус {self.status}"
 
     def clean(self):
         """
@@ -188,13 +188,14 @@ class Mailing(models.Model):
 
 
         for recipient in self.recipients.all():
-            logger.debug(f"✉Попытка отправить письмо клиенту {recipient.email} для рассылки ID:{self.pk}")
+            logger.debug(f"Попытка отправить письмо клиенту {recipient.email} для рассылки ID:{self.pk}")
             try:
                 send_mail(
                     subject=self.message.subject,
                     message=self.message.body,
                     from_email=EMAIL_HOST_USER,
                     recipient_list=[recipient.email],
+                    fail_silently=False
                         )
                 MailingAttempt.objects.create(
                         mailing=self,
@@ -217,10 +218,10 @@ class Mailing(models.Model):
             self.update_status()
             self.save()
 
-            final_message = (f"Рассылка '{self.message}' завершена: ")
+        final_message = (f"Рассылка '{self.message}' завершена: ")
 
-            logger.info(f"{final_message}")
-            return True, final_message
+        logger.info(f"{final_message}")
+        return True, final_message
 
 
 
