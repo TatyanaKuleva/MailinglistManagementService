@@ -15,6 +15,7 @@
                         <li class="mb-5"> ФИО получателя: {{object.full_name}}</li>
                         <li class="mb-5"> Комментарий: {{object.comment}}</li>
                         <li class="mb-5"> Дата добавления получателя: {{object.date_added}}</li>
+                        <li class="mb-5"> Создатель: {{object.owner}}</li>
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:recipient_list' %}" role="button">Назад</a>
                     <a class="btn btn-primary" href="{% url 'mailings:recipient_update' object.pk %}" role="button">Редактировать</a>

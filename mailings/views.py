@@ -45,6 +45,9 @@ class RecipientListView(ListView):
     template_name = 'mailings/recipient_list.html'
     context_object_name = 'recipients'
 
+    def get_queryset(self):
+        return Recipient.objects.filter(owner=self.request.user)
+
 
 class RecipientDetailView(DetailView):
     model = Recipient
@@ -57,6 +60,10 @@ class RecipientCreateView(CreateView):
     form_class = RecipientForm
     template_name = 'mailings/recipient_form.html'
     success_url = reverse_lazy('mailings:recipient_list')
+
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
 
 
 class RecipientUpdateView(UpdateView):
@@ -93,6 +100,10 @@ class MessageCreateView(CreateView):
     form_class = MessageForm
     template_name = 'mailings/message_form.html'
     success_url = reverse_lazy('mailings:message_list')
+
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
 
 
 class MessageUpdateView(UpdateView):
@@ -161,6 +172,10 @@ class MailingCreateView(CreateView):
     form_class = MailingForm
     template_name = 'mailings/mailing_form.html'
     success_url = reverse_lazy('mailings:mailing_list')
+
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
 
 
 class MailingUpdateView(UpdateView):

@@ -13,6 +13,7 @@
                     <h1 class="card-title pricing-card-title"></h1>
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
                         <li class="mb-5"> Текст сообщения: {{object.body}}</li>
+                        <li class="mb-5"> Создатель: {{object.owner}}</li>
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:message_list' %}" role="button">Назад</a>
                     <a class="btn btn-primary" href="{% url 'mailings:message_update' object.pk %}" role="button">Редактировать</a>
