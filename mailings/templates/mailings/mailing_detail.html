@@ -17,6 +17,7 @@
                         <p><strong>Статус рассылки:</strong> {{mailing.status}}</p>
                         <p><strong>Сообщение:</strong> {{mailing.message}}</p>
                         <p><strong>Количество получателей:</strong> {{recipients_count }}</p>
+                        <p><strong>Создатель:</strong> {{mailing.owner}}</p>
 
         <h2>Содержание письма</h2>
         <div style="background-color: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
@@ -31,6 +32,7 @@
                     <li>
                         <strong>{{ client.email }}</strong>
                          <strong>{{ client.full_name}}</strong>
+
                     </li>
                 {% endfor %}
             </ul>

@@ -18,6 +18,7 @@
                     <h1 class="card-title pricing-card-title"></h1>
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
                         <li class="mb-5"> {{message.body}}</li>
+                        <li class="mb-5"> {{message.owner}}</li>
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:message_detail' message.pk %}" role="button">Подробнее</a>
 

@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from config.settings import EMAIL_HOST_USER
 import logging
+from users.models import CustomUser
 
 
 logger = logging.getLogger('mailings.models')
@@ -28,6 +29,15 @@ class Recipient(models.Model):
     date_added = models.DateTimeField(
         auto_now_add=True, help_text="Дата добавления получателя."
     )
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        verbose_name="Владелец",
+        help_text="Укажите создателя",
+        related_name="recipients",
+    )
 
     def __str__(self):
         return self.email
@@ -36,6 +46,9 @@ class Recipient(models.Model):
         verbose_name = "Получатель"
         verbose_name_plural = "Получатели"
         ordering = ["date_added"]
+        permissions = [
+            ("view_all_recipient", "Может просматривать всех получателей (менеджер)"),
+        ]
 
 
 class Message(models.Model):
@@ -52,11 +65,23 @@ class Message(models.Model):
         blank=True,
         help_text="Основной текст сообщения. Может быть пустым."
     )
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        verbose_name="Владелец",
+        help_text="Укажите создателя",
+        related_name="message",
+    )
 
     class Meta:
         verbose_name = "Сообщение"
         verbose_name_plural = "Сообщения"
         ordering = ['subject']
+        permissions = [
+            ("view_all_message", "Может просматривать все сообщения (менеджер)"),
+        ]
 
     def __str__(self):
         return self.subject
@@ -106,11 +131,25 @@ class Mailing(models.Model):
         verbose_name="Получатели",
         help_text="Выберите получателей для этой рассылки."
     )
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        verbose_name="Владелец",
+        help_text="Укажите создателя",
+        related_name="mailing",
+    )
 
     class Meta:
         verbose_name = "Рассылка"
         verbose_name_plural = "Рассылки"
         ordering = ['-start_time']
+        permissions = [
+            ("view_all_mailing", "Может просматривать все рассылки (менеджер)"),
+            ("disable_mailing", "Может отключать рассылки (менеджер)"),
+
+        ]
 
     def __str__(self):
         return f"Рассылка '{self.message.subject}' с {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}, статус {self.status}"
