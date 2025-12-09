@@ -1,0 +1,26 @@
+{% extends 'mailings/base.html' %}
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Статистика</h1>
+    <p class="lead">Статистика рассылок</p>
+</div>
+<div class="container">
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3><span class="emoji"></span> Количество успешных рассылок:</h3>
+                <p>{{ total_success_mailings }}</p>
+                <h3><span class="emoji"></span> Количество неуспешных рассылок:</h3>
+                <p>{{ total_failed_mailings }}</p>
+                <h3><span class="emoji"></span> Количество рассылок всего:</h3>
+                <p>{{  total_send_message }}</p>
+
+            </div>
+
+
+        <p style="text-align: center; margin-top: 40px; color: #666;">
+            Эти данные обновляются в реальном времени.
+        </p>
+    </div>
+
+{% endblock %}

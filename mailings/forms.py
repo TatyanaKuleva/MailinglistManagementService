@@ -19,6 +19,10 @@ class RecipientForm(forms.ModelForm):
             'comment': 'Комментарий',
         }
 
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+
 class MessageForm(forms.ModelForm):
     """
     Форма для создания и редактирования объектов модели Сообщение.
@@ -34,6 +38,11 @@ class MessageForm(forms.ModelForm):
             'subject': 'Тема сообщения',
             'body': 'Текст сообщения',
         }
+
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+
 
 class MailingForm(forms.ModelForm):
     """
@@ -67,10 +76,17 @@ class MailingForm(forms.ModelForm):
             'recipients': 'Получатели',
         }
 
+
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
-        self.fields['message'].queryset = Message.objects.all()
-        self.fields['recipients'].queryset = Recipient.objects.all()
+
+        if user:
+            self.fields['message'].queryset = Message.objects.filter(owner=user)
+            self.fields['recipients'].queryset = Recipient.objects.filter(owner=user)
+        else:
+            self.fields['message'].queryset = Message.objects.all()
+            self.fields['recipients'].queryset = Recipient.objects.all()
 
 
         if self.instance.pk:

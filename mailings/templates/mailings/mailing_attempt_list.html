@@ -19,6 +19,7 @@
                         <li class="mb-5"> Дата и время попытки {{mailing_attempt.timestamp}}</li>
                         <li class="mb-5"> Тема сообщения {{mailing_attempt.mailing.message.subject}}</li>
                         <li class="mb-5"> Количество получателей рассылки {{mailing_attempt.mailing.recipients.count }}</li>
+                         <li class="mb-5"> Автор {{mailing_attempt.owner }}</li>
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_attempt_detail' mailing_attempt.pk %}" role="button">Подробнее</a>
 

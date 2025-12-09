@@ -6,12 +6,26 @@ from django.urls import reverse_lazy, reverse
 from django.core.mail import send_mail
 from config.settings import EMAIL_HOST_USER
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 import secrets
 from .forms import UserRegisterForm, UserProfileEditForm
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+    RedirectView
+)
+from django.http import HttpResponse, Http404, HttpResponseForbidden
+from .models import CustomUser
+
 
 
 User = get_user_model()
+
+def is_manager(user):
+    return user.groups.filter(name='Менеджеры').exists()
 
 class RegisterView(CreateView):
     template_name = 'register.html'
@@ -61,3 +75,53 @@ class UserProfileEditView(LoginRequiredMixin, UpdateView):
     def form_valid(self, form):
         messages.success(self.request, 'Ваш профиль успешно обновлен!')
         return super().form_valid(form)
+
+class UsersListView(UserPassesTestMixin, ListView):
+    model = CustomUser
+    template_name = 'users/users_list.html'
+    context_object_name = 'users'
+    permission_required = 'users.can_view_users'
+
+    def test_func(self):
+        user = self.request.user
+        return user.groups.filter(name='Менеджеры').exists()
+
+    def handle_no_permission(self):
+        if self.request.user.is_authenticated:
+            return HttpResponseForbidden("У вас нет прав для просмотра списка пользователей")
+        return super().handle_no_permission()
+
+
+    def get_queryset(self):
+        return super().get_queryset()
+
+
+class ToggleUserBlockView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+    model = CustomUser
+    fields = ['is_blocked']
+    template_name = 'users/users_toggle_status_confirm.html'
+    success_url = reverse_lazy('users:users_list')
+    permission_required = 'users.can_block_user'
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(CustomUser, pk=self.kwargs['pk'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_status'] = 'заблокирован' if self.object.is_blocked else 'активен'
+        context['new_status_action'] = 'разблокировать' if self.object.is_blocked else 'заблокировать'
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.is_blocked:
+            new_status = False
+        else:
+            new_status = True
+
+
+        self.object.is_blocked = new_status
+        self.object.save()
+
+        return redirect(self.success_url)
+

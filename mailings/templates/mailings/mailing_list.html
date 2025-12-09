@@ -19,13 +19,22 @@
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
                         <li class="mb-5"> Окончание рассылки {{mailing.end_time}}</li>
                         <li class="mb-5"> Статус {{mailing.status}}</li>
+                        <li class="mb-5"> Активность {{mailing.in_active_status}}</li>
                         <li class="mb-5"> Сообщение {{mailing.message}}</li>
                         <li class="mb-5"> Количество получателей {{mailing.recipients.count}}</li>
                         <li class="mb-5"> Создатель {{mailing.owner}}</li>
-
-
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_detail' mailing.pk %}" role="button">Подробнее</a>
+
+                    {% if perms.mailings.disable_mailing %}
+                            {% if mailing.in_active_status == 'active' %}
+                                <a href="{% url 'mailings:mailing_toggle_status' mailing.pk %}" class="btn btn-warning">Отключить</a>
+                            {% elif mailing.in_active_status == 'inactive' %}
+                                <a href="{% url 'mailings:mailing_toggle_status' mailing.pk %}" class="btn btn-success">Включить</a>
+                            {% endif %}
+                        {% else %}
+                            <span>Активность</span>
+                        {% endif %}
 
 
                 </div>

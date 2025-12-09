@@ -1,0 +1,44 @@
+{% extends 'mailings/base.html' %}
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Список пользователей</h1>
+    <p class="lead">Список пользователей</p
+</div>
+{% if users %}
+<div class="container">
+    <div class="row text-center">
+        {% for user in users %}
+        <div class="col-3">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal product-name-area ">{{user.email}}</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"></h1>
+                    <ul class="list-unstyled mt-3 mb-5 text-start m-3">
+                        <li class="mb-5"> Телефон {{user.phone_number}}</li>
+                        <li class="mb-5"> Аватар {{user.avatar}}</li>
+                        <li class="mb-5"> Страна {{user.country}}</li>
+                        {% if user.is_blocked %}
+                            <p>Статус: <strong style="color: red;">Заблокирован</strong></p>
+                        {% else %}
+                            <p>Статус: <strong style="color: green;">Активен </strong></p>
+                        {% endif %}
+                    </ul>
+                        {% if user.is_blocked %}
+                            <a href="{% url 'users:toggle_block' user.pk %}" class="btn btn-warning">Разблокировать</a>
+
+                        {% else %}
+                             <a href="{% url 'users:toggle_block' user.pk %}" class="btn btn-warning">Заблокировать</a>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+        {% endif %}
+    </div>
+
+
+{% endblock %}

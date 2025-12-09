@@ -17,13 +17,16 @@ from .views import (
     MailingDeleteView,
     MailingAttemptListView,
     MailingAttemptDetailView,
-    home_view
+    MailingToggleStatusView,
+    home_view,
+    statistic_view,
 )
 
 app_name = 'mailings'
 
 urlpatterns = [
     path("home/", home_view, name="home"),
+    path("statistic/", statistic_view, name="statistic"),
     path('recipients/', RecipientListView.as_view(), name='recipient_list'),
     path('recipient/create/', RecipientCreateView.as_view(), name='recipient_create'),
     path('recipient/<int:pk>/', RecipientDetailView.as_view(), name='recipient_detail'),
@@ -40,6 +43,7 @@ urlpatterns = [
     path('mailing/<int:pk>/update/', MailingUpdateView.as_view(), name='mailing_update'),
     path('mailing/<int:pk>/delete/', MailingDeleteView.as_view(), name='mailing_delete'),
     path('mailing_attempts/', MailingAttemptListView.as_view(), name='mailing_attempts_list'),
-    path('mailing_attempts/<int:pk>/', MailingAttemptDetailView.as_view(), name='mailing_attempt_detail')
+    path('mailing_attempts/<int:pk>/', MailingAttemptDetailView.as_view(), name='mailing_attempt_detail'),
+    path('mailings/<int:pk>/toggle-status/', MailingToggleStatusView.as_view(), name='mailing_toggle_status')
 
 ]
