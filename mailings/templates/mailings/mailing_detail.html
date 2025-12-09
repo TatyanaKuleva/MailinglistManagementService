@@ -18,6 +18,7 @@
                         <p><strong>Сообщение:</strong> {{mailing.message}}</p>
                         <p><strong>Количество получателей:</strong> {{recipients_count }}</p>
                         <p><strong>Создатель:</strong> {{mailing.owner}}</p>
+                        <p><strong>Активность:</strong> {{mailing.in_active_status}}</p>
 
         <h2>Содержание письма</h2>
         <div style="background-color: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
@@ -44,19 +45,24 @@
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_update' object.pk %}" role="button">Редактировать</a>
                     <a class="btn btn-primary" href="{% url 'mailings:mailing_delete' object.pk %}" role="button">Удалить</a>
 
+             {% if mailing.in_active_status == 'active' %}
+                <form method="post" action="{% url 'mailings:mailing_detail' object.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" name="send_mailing" class="btn btn-primary">Отправить рассылку</button>
+                </form>
+                    {% else %}
+                    <span>Рассылка деактивирована менеджером</span>
+               {% endif %}
 
-            <form method="post" action="{% url 'mailings:mailing_detail' object.pk %}">
-                {% csrf_token %}
-                <button type="submit" name="send_mailing" class="btn btn-primary">Отправить рассылку</button>
-            </form>
 
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                                <li class="{{ message.tags }}">{{ message }}</li>
-                     {% endfor %}
-                        </ul>
-                    {% endif %}
+
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
                 </div>
             </div>
         </div>

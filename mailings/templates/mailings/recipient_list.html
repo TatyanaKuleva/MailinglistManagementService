@@ -17,9 +17,11 @@
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title"></h1>
                     <ul class="list-unstyled mt-3 mb-5 text-start m-3">
-                        <li class="mb-5"> {{recipient.full_name}}</li>
-                        <li class="mb-5"> {{recipient.comment}}</li>
-                        <li class="mb-5"> {{recipient.date_added}}</li>
+                        <li class="mb-5"> email {{recipient.email}}</li>
+                        <li class="mb-5"> Имя {{recipient.full_name}}</li>
+                        <li class="mb-5"> Комментарий {{recipient.comment}}</li>
+                        <li class="mb-5"> Дата создания {{recipient.date_added}}</li>
+                        <li class="mb-5"> Автор {{recipient.owner}}</li>
 
                     </ul>
                     <a class="btn btn-primary" href="{% url 'mailings:recipient_detail' recipient.pk %}" role="button">Подробнее</a>

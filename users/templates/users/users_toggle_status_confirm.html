@@ -1,0 +1,10 @@
+<h1>Подтвердите изменение статуса рассылки</h1>
+
+<p>Вы собираетесь {{new_status_action }} пользователя {{ user.email }}" . Текущий статус : {{ current_status }}.</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+    <a href="{% url 'mailings:mailing_list' %}" class="btn btn-secondary">Отмена</a>
+</form>
+

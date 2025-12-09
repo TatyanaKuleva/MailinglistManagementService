@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from config.settings import EMAIL_HOST_USER
 import logging
 from users.models import CustomUser
+from config.settings import AUTH_USER_MODEL
 
 
 logger = logging.getLogger('mailings.models')
@@ -102,6 +103,10 @@ class Mailing(models.Model):
         (STATUS_COMPLETED, 'Завершена'),
     ]
 
+    in_active_status = models.CharField(max_length=20, default='active',
+                              choices=[('active', 'Активна'),
+                                       ('inactive', 'Неактивна')])
+
     start_time = models.DateTimeField(
         verbose_name="Дата и время c какого момента рассылка может быть запущена",
         help_text="Укажите дату и время первой отправки рассылки."
@@ -132,13 +137,12 @@ class Mailing(models.Model):
         help_text="Выберите получателей для этой рассылки."
     )
     owner = models.ForeignKey(
-        CustomUser,
-        on_delete=models.SET_NULL,
+        AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='mailings',
+        verbose_name='Владелец',
         blank=True,
-        null=True,
-        verbose_name="Владелец",
-        help_text="Укажите создателя",
-        related_name="mailing",
+        null=True
     )
 
     class Meta:
@@ -146,8 +150,8 @@ class Mailing(models.Model):
         verbose_name_plural = "Рассылки"
         ordering = ['-start_time']
         permissions = [
-            ("view_all_mailing", "Может просматривать все рассылки (менеджер)"),
             ("disable_mailing", "Может отключать рассылки (менеджер)"),
+            ('view_all_mailing', "Может просматривать рассылки всех пользователей")
 
         ]
 
@@ -240,7 +244,8 @@ class Mailing(models.Model):
                         mailing=self,
                         status= MailingAttempt.STATUS_SUCCESS,
                         timestamp=timezone.now(),
-                        server_response = None
+                        server_response = None,
+                        owner=self.owner
                     )
                 successful_sends += 1
                 logger.info(f"Успешно отправлено клиенту {recipient.email} для рассылки ID:{self.pk}.")
@@ -249,7 +254,8 @@ class Mailing(models.Model):
                     mailing=self,
                     status=MailingAttempt.STATUS_FAILED,
                     timestamp=timezone.now(),
-                    server_response=str(e)
+                    server_response=str(e),
+                    owner=self.owner
                 )
                 failed_sends += 1
                 logger.error(f"Ошибка отправки клиенту {recipient.email} для рассылки ID:{self.pk}: {e}")
@@ -303,12 +309,24 @@ class MailingAttempt(models.Model):
         help_text="Ссылка на рассылку, к которой относится эта попытка."
     )
 
+    owner = models.ForeignKey(
+        AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='mailing_attempts',
+        verbose_name='Владелец',
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = "Попытка рассылки"
         verbose_name_plural = "Попытки рассылок"
         ordering = ['-timestamp']
+        permissions = [
+            ('view_all_mailing_attempt', "Может просматривать попытки рассылки всех пользователей")
+        ]
 
     def __str__(self):
         return f"Попытка '{self.mailing.message.subject}' ({self.status}) в {self.timestamp.strftime('%Y-%m-%d %H:%M')}"
+
 
