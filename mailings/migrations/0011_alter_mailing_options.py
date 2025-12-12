@@ -14,9 +14,7 @@ class Migration(migrations.Migration):
             name="mailing",
             options={
                 "ordering": ["-start_time"],
-                "permissions": [
-                    ("disable_mailing", "Может отключать рассылки (менеджер)")
-                ],
+                "permissions": [("disable_mailing", "Может отключать рассылки (менеджер)")],
                 "verbose_name": "Рассылка",
                 "verbose_name_plural": "Рассылки",
             },

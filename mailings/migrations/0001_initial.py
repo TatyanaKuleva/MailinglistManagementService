@@ -49,9 +49,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "date_added",
-                    models.DateTimeField(
-                        auto_now_add=True, help_text="Дата добавления получателя."
-                    ),
+                    models.DateTimeField(auto_now_add=True, help_text="Дата добавления получателя."),
                 ),
             ],
             options={

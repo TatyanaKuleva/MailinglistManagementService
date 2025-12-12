@@ -29,9 +29,7 @@ class Migration(migrations.Migration):
             name="message",
             options={
                 "ordering": ["subject"],
-                "permissions": [
-                    ("view_all_message", "Может просматривать все сообщения (менеджер)")
-                ],
+                "permissions": [("view_all_message", "Может просматривать все сообщения (менеджер)")],
                 "verbose_name": "Сообщение",
                 "verbose_name_plural": "Сообщения",
             },
