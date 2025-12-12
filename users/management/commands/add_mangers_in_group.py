@@ -1,13 +1,15 @@
+from django.contrib.auth.models import Group
 from django.core.management.base import BaseCommand
-from django.contrib.auth.models import User, Group
+
+
 from users.models import CustomUser
-from django.db import transaction
+
 
 class Command(BaseCommand):
-    help = 'Добавляет пользователей в группы Менеджеры.'
+    help = "Добавляет пользователей в группы Менеджеры."
 
     def handle(self, *args, **options):
-        group_name = 'Менеджеры'
+        group_name = "Менеджеры"
         self.stdout.write(f'Поиск или создание группы "{group_name}"...')
 
         managers_group, created = Group.objects.get_or_create(name=group_name)
@@ -17,13 +19,13 @@ class Command(BaseCommand):
         else:
             self.stdout.write(self.style.WARNING(f'Группа "{group_name}" уже существует.'))
 
-        users_to_add = ['admin@example.com', 'tkuleva@geely_iat.ru']
+        users_to_add = ["admin@example.com", "tkuleva@geely_iat.ru"]
         added_count = 0
 
         for username in users_to_add:
             user, user_created = CustomUser.objects.get_or_create(email=username)
             if user_created:
-                user.set_password('defaultpassword123')
+                user.set_password("defaultpassword123")
                 user.save()
                 self.stdout.write(f'Пользователь "{username}" создан.')
 
@@ -35,6 +37,8 @@ class Command(BaseCommand):
                 self.stdout.write(f'Пользователь "{username}" уже в группе "{group_name}".')
 
         if added_count > 0:
-            self.stdout.write(self.style.SUCCESS(f'Всего добавлено {added_count} новых пользователей в группу "{group_name}".'))
+            self.stdout.write(
+                self.style.SUCCESS(f'Всего добавлено {added_count} новых пользователей в группу "{group_name}".')
+            )
         else:
-            self.stdout.write(self.style.WARNING('Новых пользователей не добавлено.'))
+            self.stdout.write(self.style.WARNING("Новых пользователей не добавлено."))

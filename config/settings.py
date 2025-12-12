@@ -1,18 +1,7 @@
+import os
 from pathlib import Path
-import os
+
 from dotenv import load_dotenv
-import os
-
-from django.conf.global_settings import (
-    STATICFILES_DIRS,
-    MEDIA_URL,
-    MEDIA_ROOT,
-    AUTH_USER_MODEL,
-    LOGIN_REDIRECT_URL,
-    LOGOUT_REDIRECT_URL,
-    SERVER_EMAIL,
-)
-
 
 load_dotenv(override=True)
 
@@ -106,88 +95,85 @@ USE_TZ = False
 
 STATIC_URL = "static/"
 
-STATICFILES_DIRS = (BASE_DIR / "static",)
-#
-# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-#
-MEDIA_URL = "/media/"
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-#
-AUTH_USER_MODEL = 'users.CustomUser'
-#
-LOGIN_REDIRECT_URL = 'mailings/home/'
-LOGOUT_REDIRECT_URL = '/home/'
+# STATICFILES_DIRS = (BASE_DIR / "static",)
 
 
-LOGIN_URL = 'users:login'
+# MEDIA_URL = "/media/"
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+#
+AUTH_USER_MODEL = "users.CustomUser"
+#
+LOGIN_REDIRECT_URL = "mailings/home/"
+LOGOUT_REDIRECT_URL = "/home/"
+
+
+LOGIN_URL = "users:login"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = os.getenv("EMAIL_HOST")
 EMAIL_PORT = os.getenv("EMAIL_PORT")
 EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", False) == "True"
-EMAIL_USE_SSL =os.getenv("EMAIL_USE_SSL", False) == "True"
+EMAIL_USE_SSL = os.getenv("EMAIL_USE_SSL", False) == "True"
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
-
 CACHE_ENABLED = True
 
 if CACHE_ENABLED:
     CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-            'LOCATION': os.getenv("LOCATION")
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv("LOCATION"),
         }
     }
 
 
-
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+            "style": "{",
         },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs', 'django_mailing.log'), # Создайте папку 'logs'
-            'maxBytes': 1024*1024*5,
-            'backupCount': 5,
-            'formatter': 'verbose',
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': True,
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
         },
-        'mailings': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': False,
+        "file": {
+            "level": "INFO",
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": os.path.join(BASE_DIR, "logs", "django_mailing.log"),  # Создайте папку 'logs'
+            "maxBytes": 1024 * 1024 * 5,
+            "backupCount": 5,
+            "formatter": "verbose",
         },
     },
-    'root': {
-        'handlers': ['console', 'file'],
-        'level': 'WARNING',
+    "loggers": {
+        "django": {
+            "handlers": ["console", "file"],
+            "level": "INFO",
+            "propagate": True,
+        },
+        "mailings": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": False,
+        },
+    },
+    "root": {
+        "handlers": ["console", "file"],
+        "level": "WARNING",
     },
 }
